@@ -47,4 +47,7 @@ window.addEventListener("load", () => {
         [...dotItems].forEach((el) => el.classList.remove("active"));
         dotItems[index].classList.add("active");
     }
+    setInterval(function () {
+        btnNext.click();
+    }, 2000);
 });

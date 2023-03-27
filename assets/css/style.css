@@ -297,15 +297,6 @@ body {
     }
 }
 
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
 .modal-login.active {
     display: flex;
     animation: fadeIn 0.5s forwards linear;
