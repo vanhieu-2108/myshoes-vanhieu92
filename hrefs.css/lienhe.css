@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+}
+
+iframe {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.map {
+    position: relative;
+}
+
+.load {
+    position: absolute;
+    inset: 0;
+}
+
+.load.active {
+    display: none;
+}
+
+.load .img {
+    width: 100%;
+    height: 450px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.load .img img {
+    width: 250px;
+}
+
+.form {
+    margin-top: 40px;
+    display: flex;
+    gap: 30px;
+}
+
+.form-left {
+    width: 30%;
+    background-color: #eee;
+}
+
+.form-left .container {
+    padding: 40px 30px;
+}
+
+.form-left .item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.form-left .item:last-child {
+    border: 0;
+}
+
+.form-left .icon {
+    font-size: 30px;
+}
+
+.form-left .title {
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.form-left .desc {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #8b9198;
+}
+
+.form-right {
+    width: 70%;
+    padding: 10px 0;
+}
+
+.form-right .title {
+    color: #333;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.form-right .form-group {
+    margin-top: 20px;
+}
+.form-right .form-group .name,
+.form-right .form-group .email {
+    width: 90%;
+    display: block;
+    margin-bottom: 20px;
+    padding: 15px 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-right .form-group textarea {
+    width: 90%;
+    outline: none;
+    padding: 15px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-right .form-group .confirm {
+    margin-top: 10px;
+}
+
+.form-right .confirm span a {
+    color: #0f3a8d;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.form-right button {
+    margin-top: 20px;
+    width: 90%;
+    padding: 15px 0;
+    border: 0;
+    background: #0f45ac;
+    color: #fff;
+    cursor: pointer;
+}

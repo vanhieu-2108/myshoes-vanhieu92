@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="../assets/css/reset.css" />
+        <link rel="stylesheet" href="../hrefs.css/lienhe.css" />
+    </head>
+    <body>
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.3977348134636!2d105.82896791391431!3d21.016765893565847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab82489cfa89%3A0xf2c65fad8571d0b7!2zMjQ5IFAuIFjDoyDEkMOgbiwgTmFtIMSQ4buTbmcsIMSQ4buRbmcgxJBhLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1679538555135!5m2!1svi!2s"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+        </div>
+        <div class="load">
+            <div class="img">
+                <img src="../assets/imgs/loading-map.gif" alt="" />
+            </div>
+        </div>
+        <div class="form">
+            <div class="form-left">
+                <div class="container">
+                    <div class="item">
+                        <div class="icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="info">
+                            <h2 class="title">MYSHSOES.VN</h2>
+                            <p class="desc">249 Xã Đàn, Đống Đa, Hà Nội</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon" style="color: #2484c2">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="info">
+                            <h2 class="title" style="color: #2484c2">
+                                HOTLINE
+                            </h2>
+                            <p class="desc">SĐT: 0973711868</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div class="info">
+                            <h2 class="title">THỜI GIAN LÀM VIỆC</h2>
+                            <p class="desc">Thời gian làm việc: 9:00 - 21:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-right">
+                <h1 class="title">MYSHOES.VN SẴN SÀNG LẮNG NGHE BẠN!</h1>
+                <form class="form-group" autocomplete="off">
+                    <input
+                        type="text"
+                        placeholder="Họ và tên"
+                        class="name"
+                        required
+                        name="username"
+                    />
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        class="email"
+                        required
+                        name="email"
+                    />
+                    <textarea
+                        name="info"
+                        id=""
+                        cols="30"
+                        rows="6"
+                        placeholder="Thông tin"
+                        required
+                    ></textarea>
+                    <div class="confirm">
+                        <input
+                            type="checkbox"
+                            name="check"
+                            id="check"
+                            style="cursor: pointer"
+                        />
+                        <label for="check" style="cursor: pointer"
+                            >Tôi đã đọc và đồng ý với
+                        </label>
+                        <span><a href="#!">Chính sách bảo mật</a></span>
+                    </div>
+                    <button type="submit">XÁC NHẬN</button>
+                </form>
+            </div>
+        </div>
+        <script>
+            const form = document.querySelector(".form-group");
+            const load = document.querySelector(".load");
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                form.elements["email"].value = "";
+                form.elements["username"].value = "";
+                form.elements["info"].value = "";
+                alert(
+                    "Chúng tôi đã nhận email và thông tin của bạn xin vui lòng đợi phản hồi từ chúng tôi xin cảm ơn."
+                );
+                form.elements["check"].checked = false;
+            });
+            function loadDing() {
+                load.classList.add("active");
+            }
+
+            setTimeout(function () {
+                loadDing();
+            }, 2000);
+        </script>
+    </body>
+</html>

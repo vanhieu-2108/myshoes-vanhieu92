@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Shoes</title>
+        <!-- Font Text -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Font Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        />
+        <!-- Css -->
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <div class="progress-bar"></div>
+        <header class="header">
+            <div class="content">
+                <div class="body">
+                    <!-- Logo -->
+                    <img
+                        src="./assets/imgs/logo.png"
+                        alt="myshoes"
+                        class="img-logo"
+                    />
+                    <!-- Form search -->
+                    <div class="form-search">
+                        <input
+                            type="search"
+                            placeholder="Tìm kiếm sản phẩm..."
+                            class="input-search"
+                        />
+                        <button class="btn-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <!-- Form login -->
+                    <div class="container">
+                        <div class="form-loggin">
+                            <div class="user">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="title hover-log">
+                                <p class="username">Tài khoản</p>
+                                <span>Đăng nhập / Đăng ký</span>
+                            </div>
+                            <div class="form-sign">
+                                <span class="sign-in">
+                                    <i
+                                        class="fa-solid fa-user"
+                                        style="font-size: 16px"
+                                    ></i>
+                                    Đăng nhập
+                                </span>
+                                <span class="sign-up">
+                                    <i
+                                        class="fa-regular fa-user"
+                                        style="font-size: 16px"
+                                    >
+                                    </i>
+                                    Đăng ký
+                                </span>
+                            </div>
+                        </div>
+                        <div class="bag">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="nav fixed">
+            <div class="content">
+                <ul class="list">
+                    <li>
+                        <a
+                            href="./hrefs/trangchu.html"
+                            target="load"
+                            onclick="resizeIframe('2240')"
+                            >Trang Chủ</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="./hrefs/gioithieu.html"
+                            target="load"
+                            onclick="resizeIframe('1140')"
+                            >Giới thiệu</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="./hrefs/sanpham.html"
+                            target="load"
+                            onclick="resizeIframe('2250')"
+                            >Sản phẩm</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="./hrefs/lienhe.html"
+                            target="load"
+                            onclick="resizeIframe('940')"
+                            >Liên hệ</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="main-content">
+            <div class="content">
+                <iframe
+                    src="./hrefs/trangchu.html"
+                    frameborder="0"
+                    class="main-iframe"
+                    name="load"
+                    scrolling="no"
+                >
+                </iframe>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="content">
+                <div class="row">
+                    <div class="column">
+                        <h2 class="heading">MYSHOES.VN - GIÀY CHÍNH HÃNG</h2>
+
+                        <img src="./assets/imgs/logo-foot.png" alt="" />
+                        <p class="desc">
+                            Myshoes.vn được định hướng trở thành hệ thống thương
+                            mại điện tử bán giày chính hãng hàng đầu Việt Nam.
+                            Showroom: 249 Xã Đàn, Đống Đa, Hà Nội Hotline:
+                            0973711868
+                        </p>
+                    </div>
+                    <div class="column">
+                        <h2 class="heading">VỀ CHÚNG TÔI</h2>
+                        <ul class="list">
+                            <li>
+                                <a href="#!">Giới thiệu</a>
+                            </li>
+                            <li>
+                                <a href="#!">Điều khoản sử dụng</a>
+                            </li>
+                            <li>
+                                <a href="#!">Chính sách bảo mật </a>
+                            </li>
+                            <li>
+                                <a href="#!">Cơ hội việc làm</a>
+                            </li>
+                            <li>
+                                <a href="#!">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h2 class="heading">KHÁCH HÀNG</h2>
+                        <ul class="list">
+                            <li>
+                                <a href="#!">Hướng dẫn mua hàng</a>
+                            </li>
+                            <li>
+                                <a href="#!">Chính sách đổi trả</a>
+                            </li>
+                            <li>
+                                <a href="#!">Chính sách bảo hành</a>
+                            </li>
+                            <li>
+                                <a href="#!">Hướng dẫn chọn size</a>
+                            </li>
+                            <li>
+                                <a href="#!">Chương trình khuyến mại</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h2 class="heading heading-last">CHỨNG NHẬN</h2>
+                        <div class="img-wrapper">
+                            <img src="./assets/imgs/foot-img-1.png" alt="" />
+                            <img
+                                src="./assets/imgs/foot-img-12png.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="modal-login">
+            <div class="container">
+                <h2 class="title">THÔNG TIN ĐĂNG NHẬP</h2>
+                <form action="" class="form-sign-in">
+                    <input
+                        type="text"
+                        placeholder="Điện thoại/Email:"
+                        required
+                    />
+                    <input type="password" placeholder="Mật khẩu:" required />
+                    <button type="submit">ĐĂNG NHẬP</button>
+                </form>
+            </div>
+        </div>
+        <div class="modal-sign-up">
+            <div class="container">
+                <h2 class="title">THÔNG TIN ĐĂNG KÝ</h2>
+                <form action="" class="form-sign-in">
+                    <input required type="text" placeholder="Họ và tên:" />
+                    <input required type="email" placeholder="Email:" />
+                    <input required type="text" placeholder="Điện thoại:" />
+                    <input required type="password" placeholder="Mật khẩu:" />
+                    <input
+                        required
+                        type="password"
+                        placeholder="Nhập lại mật khẩu:"
+                    />
+                    <button type="submit">ĐĂNG KÝ</button>
+                </form>
+            </div>
+        </div>
+        <script>
+            const progressBar = document.querySelector(".progress-bar");
+            function resizeIframe(height) {
+                var iframe = document.querySelector(".main-iframe");
+                iframe.style = `height: ${height}px`;
+                window.scrollTo(0, 0);
+            }
+
+            window.addEventListener("scroll", function () {
+                const scrollTop = window.pageYOffset;
+                const scrollBar =
+                    document.documentElement.scrollHeight - window.innerHeight;
+                const scrollWidth = Math.round((scrollTop / scrollBar) * 100);
+                progressBar.style.width = scrollWidth + "%";
+            });
+        </script>
+        <script src="./app.js"></script>
+    </body>
+</html>

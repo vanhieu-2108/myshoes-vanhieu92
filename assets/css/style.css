@@ -1,0 +1,392 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+}
+
+:root {
+    --primary-color: #0a437f;
+}
+
+/* Commont */
+.content {
+    padding: 0 20px;
+}
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    height: 5px;
+    width: 0;
+    z-index: 1000;
+    transition: all 0.2s ease;
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+
+/* Header */
+.header {
+    padding-top: 20px;
+    background-color: var(--primary-color);
+}
+
+.header .body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .img-logo {
+    width: 140px;
+    object-fit: cover;
+}
+
+.header .form-search {
+    width: 40%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.header .input-search {
+    flex-grow: 1;
+    padding: 15px;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    border: 0;
+}
+
+.header .btn-search {
+    flex-shrink: 0;
+    border: 0;
+    background: #fff;
+    padding: 14px 15px;
+    border-radius: 0 4px 4px 0;
+    outline: none;
+}
+
+.header .btn-search .fa-magnifying-glass {
+    font-size: 16px;
+}
+.header .btn-search .fa-magnifying-glass:hover {
+    color: #ce4855;
+    cursor: pointer;
+}
+
+.header .form-loggin {
+    display: flex;
+    align-items: center;
+    color: #ddd;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 12px;
+}
+
+.header .form-loggin:hover .form-sign {
+    display: block;
+}
+
+.header .form-sign {
+    padding-top: 5px;
+    position: absolute;
+    bottom: -75px;
+    z-index: 999;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: #333;
+    font-size: 12px;
+    border-radius: 5px;
+    display: none;
+}
+
+.header .form-sign::before {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #f00;
+    position: absolute;
+    top: -11.5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header .form-sign span {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.header .form-sign span:hover {
+    background-color: #eee;
+}
+
+.header .form-sign span:last-child {
+    border: 0;
+}
+
+.header .form-loggin .fa-user {
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header .container .bag {
+    font-size: 30px;
+    margin-left: 30px;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+}
+
+.header .container .bag::before {
+    content: "0";
+    display: inline-block;
+    background-color: #f00;
+    position: absolute;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 10px;
+    top: -10px;
+    right: -10px;
+}
+
+/* Nav */
+.nav {
+    padding-top: 20px;
+    background-color: var(--primary-color);
+}
+
+.nav.fixed {
+    position: sticky;
+    top: -20px;
+    left: 0;
+    right: 0;
+}
+
+.nav .list {
+    display: flex;
+}
+
+.nav .list a {
+    color: #fff;
+    display: inline-block;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: 700;
+    columns: #fff;
+}
+
+.nav .list a:hover {
+    color: #d8d8df;
+}
+/* Iframe */
+.main-iframe {
+    width: 100%;
+    height: 2240px;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #0f3057;
+}
+
+.footer .row {
+    display: flex;
+    color: #f3f4f6;
+    padding: 40px 0;
+    gap: 10px;
+}
+
+.footer .row .column {
+    width: calc(20% - 7.5px);
+}
+.footer .row .column:first-child {
+    width: calc(40% - 7.5px);
+}
+
+.footer .column .heading {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer .column .heading-last {
+    text-align: center;
+}
+
+.footer .column:first-child img {
+    float: left;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.footer .column:first-child .desc {
+    line-height: 1.4;
+    width: 510px;
+}
+
+.footer .column .list a {
+    display: inline-block;
+    text-decoration: none;
+    color: #f3f4f6;
+    padding: 15px 0;
+}
+
+.footer .column .list a:hover {
+    color: #ce4855;
+}
+
+.footer .column .list a:first-child {
+    padding-top: 0;
+}
+
+.footer .column:last-child img:last-child {
+    width: 250px;
+    height: 95px;
+    object-fit: cover;
+}
+
+.footer .column .img-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.modal-login {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-login.fade-out {
+    animation: fadeOut 0.5s forwards linear;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.modal-login.active {
+    display: flex;
+    animation: fadeIn 0.5s forwards linear;
+}
+
+.modal-login .container {
+    width: 500px;
+    background: #fff;
+    padding: 20px 10px;
+}
+
+.modal-login .container .title {
+    text-align: center;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+.modal-login .container .form-sign-in {
+    margin-top: 20px;
+}
+
+.modal-login .container input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.modal-sign-up .container button,
+.modal-login .container button {
+    width: 100%;
+    border: 0;
+    padding: 15px 0;
+    background-color: #0f45ac;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-login .container button:hover,
+.modal-sign-up .container button:hover {
+    opacity: 0.9;
+}
+
+.modal-sign-up {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-sign-up.active {
+    display: flex;
+}
+
+.modal-sign-up .container {
+    width: 500px;
+    background: #fff;
+    padding: 20px 10px;
+}
+
+.modal-sign-up .container .title {
+    text-align: center;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+.modal-sign-up .container input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
