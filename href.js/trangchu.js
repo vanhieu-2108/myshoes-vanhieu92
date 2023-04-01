@@ -32,7 +32,6 @@ window.addEventListener("load", () => {
             } else {
                 positionX += sliderMainWidth;
             }
-            console.log(positionX);
             sliderMain.style = `transform: translateX(${-1 * positionX}px)`;
         } else if (value === -1) {
             index--;
