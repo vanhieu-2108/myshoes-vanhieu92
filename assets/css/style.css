@@ -4,7 +4,7 @@
 
 html,
 body {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 body {
@@ -26,7 +26,7 @@ body {
     top: 0;
     height: 5px;
     width: 0;
-    z-index: 1000;
+    z-index: 999999999;
     transition: all 0.2s ease;
     background-color: #0093e9;
     background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
@@ -34,6 +34,7 @@ body {
 
 /* Header */
 .header {
+    position: relative;
     padding-top: 20px;
     background-color: var(--primary-color);
 }
@@ -41,6 +42,7 @@ body {
 .header .body {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .header .img-logo {
@@ -97,7 +99,7 @@ body {
     padding-top: 5px;
     position: absolute;
     bottom: -75px;
-    z-index: 999;
+    z-index: 99999999;
     left: 10%;
     display: flex;
     flex-direction: column;
@@ -179,6 +181,7 @@ body {
     top: -20px;
     left: 0;
     right: 0;
+    z-index: 9999999;
 }
 
 .nav .list {
@@ -201,6 +204,7 @@ body {
 .main-iframe {
     width: 100%;
     height: 2240px;
+    /* height: 8000px; */
 }
 
 /* Footer */
@@ -272,7 +276,6 @@ body {
     align-items: center;
     gap: 20px;
 }
-
 .modal-login {
     position: fixed;
     inset: 0;
@@ -281,7 +284,7 @@ body {
     justify-content: center;
     align-items: center;
     display: none;
-    z-index: 999;
+    z-index: 9999999999;
 }
 
 .modal-login.fade-out {
@@ -353,7 +356,7 @@ body {
     justify-content: center;
     align-items: center;
     display: none;
-    z-index: 999;
+    z-index: 9999999999;
 }
 
 .modal-sign-up.active {
@@ -382,4 +385,42 @@ body {
     outline: none;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.choice-size {
+    position: fixed;
+    inset: 0;
+    z-index: 9999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.choice-size.active {
+    display: flex;
+}
+
+.choice-size .content {
+    width: 500px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.choice-size .content img {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
 }

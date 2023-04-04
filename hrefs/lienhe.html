@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>My Shoes</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -16,102 +16,292 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         />
         <link rel="stylesheet" href="../assets/css/reset.css" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
         <link rel="stylesheet" href="../hrefs.css/lienhe.css" />
     </head>
     <body>
-        <div class="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.3977348134636!2d105.82896791391431!3d21.016765893565847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab82489cfa89%3A0xf2c65fad8571d0b7!2zMjQ5IFAuIFjDoyDEkMOgbiwgTmFtIMSQ4buTbmcsIMSQ4buRbmcgxJBhLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1679538555135!5m2!1svi!2s"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-        </div>
-        <div class="load">
-            <div class="img">
-                <img src="../assets/imgs/loading-map.gif" alt="" />
-            </div>
-        </div>
-        <div class="form">
-            <div class="form-left">
-                <div class="container">
-                    <div class="item">
-                        <div class="icon">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <div class="info">
-                            <h2 class="title">MYSHSOES.VN</h2>
-                            <p class="desc">249 Xã Đàn, Đống Đa, Hà Nội</p>
-                        </div>
+        <div class="progress-bar"></div>
+        <header class="header">
+            <div class="content">
+                <div class="body">
+                    <!-- Logo -->
+                    <img
+                        src="../assets/imgs/logo.png"
+                        alt="myshoes"
+                        class="img-logo"
+                    />
+                    <!-- Form search -->
+                    <div class="form-search">
+                        <input
+                            type="search"
+                            placeholder="Tìm kiếm sản phẩm..."
+                            class="input-search"
+                        />
+                        <button class="btn-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </div>
-                    <div class="item">
-                        <div class="icon" style="color: #2484c2">
-                            <i class="fa-solid fa-phone"></i>
+                    <!-- Form login -->
+                    <div class="container">
+                        <div class="form-loggin">
+                            <div class="user">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="title hover-log">
+                                <p class="username">Tài khoản</p>
+                                <span>Đăng nhập / Đăng ký</span>
+                            </div>
+                            <div class="form-sign">
+                                <span class="sign-in">
+                                    <i
+                                        class="fa-solid fa-user"
+                                        style="font-size: 16px"
+                                    ></i>
+                                    Đăng nhập
+                                </span>
+                                <span class="sign-up">
+                                    <i
+                                        class="fa-regular fa-user"
+                                        style="font-size: 16px"
+                                    >
+                                    </i>
+                                    Đăng ký
+                                </span>
+                            </div>
                         </div>
-                        <div class="info">
-                            <h2 class="title" style="color: #2484c2">
-                                HOTLINE
-                            </h2>
-                            <p class="desc">SĐT: 0973711868</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="icon">
-                            <i class="fa-solid fa-clock"></i>
-                        </div>
-                        <div class="info">
-                            <h2 class="title">THỜI GIAN LÀM VIỆC</h2>
-                            <p class="desc">Thời gian làm việc: 9:00 - 21:00</p>
+                        <div class="bag">
+                            <i class="fa-solid fa-bag-shopping"></i>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="form-right">
-                <h1 class="title">MYSHOES.VN SẴN SÀNG LẮNG NGHE BẠN!</h1>
-                <form class="form-group" autocomplete="off">
+        </header>
+        <nav class="nav fixed">
+            <div class="content">
+                <ul class="list">
+                    <li>
+                        <a href="#!" onclick="resizeLH('../index.html')"
+                            >Trang Chủ</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#!" onclick="resizeLH('./gioithieu.html')"
+                            >Giới thiệu</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#!" onclick="resizeLH('./sanpham.html')"
+                            >Sản phẩm</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#!" onclick="resizeLH('./lienhe.html')"
+                            >Liên hệ</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-lh">
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.3977348134636!2d105.82896791391431!3d21.016765893565847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab82489cfa89%3A0xf2c65fad8571d0b7!2zMjQ5IFAuIFjDoyDEkMOgbiwgTmFtIMSQ4buTbmcsIMSQ4buRbmcgxJBhLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1679538555135!5m2!1svi!2s"
+                    width="600"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+            <div class="load">
+                <div class="img">
+                    <img src="../assets/imgs/loading-map.gif" alt="" />
+                </div>
+            </div>
+            <div class="form">
+                <div class="form-left">
+                    <div class="container">
+                        <div class="item">
+                            <div class="icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="info">
+                                <h2 class="title">MYSHSOES.VN</h2>
+                                <p class="desc">249 Xã Đàn, Đống Đa, Hà Nội</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icon" style="color: #2484c2">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="info">
+                                <h2 class="title" style="color: #2484c2">
+                                    HOTLINE
+                                </h2>
+                                <p class="desc">SĐT: 0973711868</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div class="info">
+                                <h2 class="title">THỜI GIAN LÀM VIỆC</h2>
+                                <p class="desc">
+                                    Thời gian làm việc: 9:00 - 21:00
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-right">
+                    <h1 class="title">MYSHOES.VN SẴN SÀNG LẮNG NGHE BẠN!</h1>
+                    <form class="form-group" autocomplete="off">
+                        <input
+                            type="text"
+                            placeholder="Họ và tên"
+                            class="name"
+                            required
+                            name="username"
+                        />
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            class="email"
+                            required
+                            name="email"
+                        />
+                        <textarea
+                            name="info"
+                            id=""
+                            cols="30"
+                            rows="6"
+                            placeholder="Thông tin"
+                            required
+                        ></textarea>
+                        <div class="confirm">
+                            <input
+                                type="checkbox"
+                                name="check"
+                                id="check"
+                                style="cursor: pointer"
+                            />
+                            <label for="check" style="cursor: pointer"
+                                >Tôi đã đọc và đồng ý với
+                            </label>
+                            <span><a href="#!">Chính sách bảo mật</a></span>
+                        </div>
+                        <button type="submit">XÁC NHẬN</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="content">
+                <div class="row">
+                    <div class="column">
+                        <h2 class="heading">MYSHOES.VN - GIÀY CHÍNH HÃNG</h2>
+                        <img src="../assets/imgs/logo-foot.png" alt="" />
+                        <p class="desc">
+                            Myshoes.vn được định hướng trở thành hệ thống thương
+                            mại điện tử bán giày chính hãng hàng đầu Việt Nam.
+                            Showroom: 249 Xã Đàn, Đống Đa, Hà Nội Hotline:
+                            0973711868
+                        </p>
+                    </div>
+                    <div class="column">
+                        <h2 class="heading">VỀ CHÚNG TÔI</h2>
+                        <ul class="list">
+                            <li>
+                                <a href="#!">Giới thiệu</a>
+                            </li>
+                            <li>
+                                <a href="#!">Điều khoản sử dụng</a>
+                            </li>
+                            <li>
+                                <a href="#!">Chính sách bảo mật </a>
+                            </li>
+                            <li>
+                                <a href="#!">Cơ hội việc làm</a>
+                            </li>
+                            <li>
+                                <a href="#!">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h2 class="heading">KHÁCH HÀNG</h2>
+                        <ul class="list">
+                            <li>
+                                <a href="#!">Hướng dẫn mua hàng</a>
+                            </li>
+                            <li>
+                                <a href="#!">Chính sách đổi trả</a>
+                            </li>
+                            <li>
+                                <a href="#!">Chính sách bảo hành</a>
+                            </li>
+                            <li>
+                                <a href="#!">Hướng dẫn chọn size</a>
+                            </li>
+                            <li>
+                                <a href="#!">Chương trình khuyến mại</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h2 class="heading heading-last">CHỨNG NHẬN</h2>
+                        <div class="img-wrapper">
+                            <img src="../assets/imgs/foot-img-1.png" alt="" />
+                            <img
+                                src="../assets/imgs/foot-img-12png.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="modal-login">
+            <div class="container">
+                <h2 class="title">THÔNG TIN ĐĂNG NHẬP</h2>
+                <form action="" class="form-sign-in">
                     <input
                         type="text"
-                        placeholder="Họ và tên"
-                        class="name"
+                        placeholder="Điện thoại/Email:"
                         required
-                        name="username"
                     />
-                    <input
-                        type="email"
-                        placeholder="Email"
-                        class="email"
-                        required
-                        name="email"
-                    />
-                    <textarea
-                        name="info"
-                        id=""
-                        cols="30"
-                        rows="6"
-                        placeholder="Thông tin"
-                        required
-                    ></textarea>
-                    <div class="confirm">
-                        <input
-                            type="checkbox"
-                            name="check"
-                            id="check"
-                            style="cursor: pointer"
-                        />
-                        <label for="check" style="cursor: pointer"
-                            >Tôi đã đọc và đồng ý với
-                        </label>
-                        <span><a href="#!">Chính sách bảo mật</a></span>
-                    </div>
-                    <button type="submit">XÁC NHẬN</button>
+                    <input type="password" placeholder="Mật khẩu:" required />
+                    <button type="submit">ĐĂNG NHẬP</button>
                 </form>
+            </div>
+        </div>
+        <div class="modal-sign-up">
+            <div class="container">
+                <h2 class="title">THÔNG TIN ĐĂNG KÝ</h2>
+                <form action="" class="form-sign-in">
+                    <input required type="text" placeholder="Họ và tên:" />
+                    <input required type="email" placeholder="Email:" />
+                    <input required type="text" placeholder="Điện thoại:" />
+                    <input required type="password" placeholder="Mật khẩu:" />
+                    <input
+                        required
+                        type="password"
+                        placeholder="Nhập lại mật khẩu:"
+                    />
+                    <button type="submit">ĐĂNG KÝ</button>
+                </form>
+            </div>
+        </div>
+        <div class="choice-size">
+            <div class="content">
+                <img src="./assets/imgs/chon-size.png" alt="" />
             </div>
         </div>
         <script>
             const form = document.querySelector(".form-group");
+            const progressBar = document.querySelector(".progress-bar");
             const load = document.querySelector(".load");
             form.addEventListener("submit", function (e) {
                 e.preventDefault();
@@ -130,6 +320,17 @@
             setTimeout(function () {
                 loadDing();
             }, 2000);
+            function resizeLH(value) {
+                window.location.assign(value);
+            }
+            window.addEventListener("scroll", function (e) {
+                const scrollTop = window.pageYOffset;
+                const scrollBar =
+                    document.documentElement.scrollHeight - window.innerHeight;
+                const scrollWidth = Math.round((scrollTop / scrollBar) * 100);
+                progressBar.style.width = scrollWidth + "%";
+            });
         </script>
+        <script src="../app.js"></script>
     </body>
 </html>

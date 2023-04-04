@@ -5,6 +5,7 @@ window.addEventListener("load", () => {
     const sliderItems = document.querySelectorAll(".slider-item");
     const dotItems = document.querySelectorAll(".slider-dot-item");
     const sliderMainWidth = sliderMain.offsetWidth;
+    const productItems = document.querySelectorAll(".product-item");
     let positionX = 0;
     let index = 0;
     btnNext.addEventListener("click", function () {
@@ -49,4 +50,14 @@ window.addEventListener("load", () => {
     setInterval(function () {
         btnNext.click();
     }, 2000);
+    [...productItems].forEach((item) =>
+        item.addEventListener("mouseenter", function () {
+            item.querySelector(".img-2").style = `z-index: 1`;
+        })
+    );
+    [...productItems].forEach((item) =>
+        item.addEventListener("mouseleave", function () {
+            item.querySelector(".img-2").style = `z-index: -1`;
+        })
+    );
 });

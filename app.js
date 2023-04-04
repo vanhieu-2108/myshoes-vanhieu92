@@ -4,6 +4,7 @@ window.addEventListener("load", () => {
     const signIn = document.querySelector(".sign-in");
     const signUp = document.querySelector(".sign-up");
     const body = document.body;
+    const choiceSize = document.querySelector(".choice-size");
     signIn.addEventListener("click", function () {
         modalLogin.classList.add("active");
         modalSignUp.classList.remove("active");
@@ -14,6 +15,8 @@ window.addEventListener("load", () => {
             modalLogin.classList.remove("active");
         } else if (e.target.matches(".modal-sign-up")) {
             modalSignUp.classList.remove("active");
+        } else if (e.target.matches(".choice-size")) {
+            choiceSize.classList.remove("active");
         }
     });
     signUp.addEventListener("click", function () {

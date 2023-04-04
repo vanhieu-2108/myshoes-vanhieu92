@@ -19,6 +19,7 @@
         />
         <!-- Css -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
+        <link rel="stylesheet" href="./hrefs.css/trangchu.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
     <body>
@@ -82,34 +83,28 @@
             <div class="content">
                 <ul class="list">
                     <li>
-                        <a
-                            href="./hrefs/trangchu.html"
-                            target="load"
-                            onclick="resizeIframe('2240')"
+                        <a href="#!" onclick="resizeIframe('./index.html')"
                             >Trang Chủ</a
                         >
                     </li>
                     <li>
                         <a
-                            href="./hrefs/gioithieu.html"
-                            target="load"
-                            onclick="resizeIframe('1200')"
+                            href="#!"
+                            onclick="resizeIframe('./hrefs/gioithieu.html')"
                             >Giới thiệu</a
                         >
                     </li>
                     <li>
                         <a
-                            href="./hrefs/sanpham.html"
-                            target="load"
-                            onclick="resizeIframe('2250')"
+                            href="#!"
+                            onclick="resizeIframe('./hrefs/sanpham.html')"
                             >Sản phẩm</a
                         >
                     </li>
                     <li>
                         <a
-                            href="./hrefs/lienhe.html"
-                            target="load"
-                            onclick="resizeIframe('940')"
+                            href="#!"
+                            onclick="resizeIframe('./hrefs/lienhe.html')"
                             >Liên hệ</a
                         >
                     </li>
@@ -118,14 +113,483 @@
         </nav>
         <div class="main-content">
             <div class="content">
-                <iframe
-                    src="./hrefs/trangchu.html"
-                    frameborder="0"
-                    class="main-iframe"
-                    name="load"
-                    scrolling="no"
-                >
-                </iframe>
+                <div class="image-wrapper">
+                    <div class="wrapper-left">
+                        <img
+                            src="../assets/imgs/newsport.png"
+                            alt=""
+                            class="image"
+                        />
+                    </div>
+                    <div class="slider-wrapper">
+                        <div class="btn-prev">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </div>
+                        <ul class="slider-dots">
+                            <li
+                                class="slider-dot-item active"
+                                data-index="0"
+                            ></li>
+                            <li class="slider-dot-item" data-index="1"></li>
+                            <li class="slider-dot-item" data-index="2"></li>
+                            <li class="slider-dot-item" data-index="3"></li>
+                        </ul>
+                        <div class="slider-container">
+                            <div class="slider-main">
+                                <div class="slider-item">
+                                    <img
+                                        src="../assets/imgs/slider-1.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="slider-item">
+                                    <img
+                                        src="../assets/imgs/slider-2.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="slider-item">
+                                    <img
+                                        src="../assets/imgs/slider-3.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="slider-item">
+                                    <img
+                                        src="../assets/imgs/slider-4.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-next">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    <div class="wrapper-right">
+                        <img
+                            src="../assets/imgs/xitkhumui.jpg"
+                            alt=""
+                            class="image"
+                        />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row-item">
+                        <div class="body">
+                            <div class="icon">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="desc">Hàng chính hãng, chất lượng cao.</p>
+                        </div>
+                    </div>
+                    <div class="row-item">
+                        <div class="body">
+                            <div class="icon">
+                                <i class="fa-solid fa-truck-fast"></i>
+                            </div>
+                            <p class="desc">Miễn phí giao hàng với đơn >500k</p>
+                        </div>
+                    </div>
+                    <div class="row-item">
+                        <div class="body">
+                            <div class="icon">
+                                <i
+                                    class="fa-solid fa-arrow-right-arrow-left"
+                                ></i>
+                            </div>
+                            <p class="desc">
+                                Đổi hàng 30 ngày thủ tục đơn giản
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="heading-2">
+                    <h2 class="title">SẢN PHẨM MỚI</h2>
+                    <p class="desc">#NEW</p>
+                </div>
+                <div class="list-products">
+                    <div class="product-item">
+                        <div class="sale-new">
+                            <span style="background-color: #0f3a8d">NEW</span>
+                            <span style="background-color: #e2293d">-18 %</span>
+                        </div>
+                        <div class="immedia">
+                            <a href="../products/sp1.html">
+                                <img
+                                    src="../assets/imgs/product-1.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    src="../assets/imgs/product-1.1.jpg"
+                                    alt=""
+                                    class="img-2"
+                                    onclick="scrollHeight()"
+                                />
+                            </a>
+                        </div>
+                        <span class="manufacturer">Puma</span>
+                        <div class="body">
+                            <h2 class="title">Giày Puma Taper Nam - Trắng</h2>
+                            <p class="price">
+                                1.390.000₫ <span class="sale"> 1.700.000₫</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <a href="../products/sp2.html">
+                            <div class="immedia">
+                                <div class="sale-new">
+                                    <span style="background-color: #0f3a8d"
+                                        >NEW</span
+                                    >
+                                    <span style="background-color: #e2293d"
+                                        >-16 %</span
+                                    >
+                                </div>
+                                <img
+                                    src="../assets/imgs/product-2.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    src="../assets/imgs/product-2.1.jpg"
+                                    alt=""
+                                    class="img-2"
+                                />
+                            </div>
+                        </a>
+                        <span class="manufacturer">Adidas</span>
+                        <div class="body">
+                            <h2 class="title">
+                                Giày adidas Adizero RC 5 Nam - Đen Trắng
+                            </h2>
+                            <p class="price">
+                                2.490.000₫ <span class="sale"> 2.950.000₫</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <a href="../products/sp3.html">
+                            <div class="immedia">
+                                <div class="sale-new">
+                                    <span style="background-color: #0f3a8d"
+                                        >NEW</span
+                                    >
+                                    <span style="background-color: #e2293d"
+                                        >-18 %</span
+                                    >
+                                </div>
+                                <img
+                                    src="../assets/imgs/product-3.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    src="../assets/imgs/product-3.1.jpg"
+                                    alt=""
+                                    class="img-2"
+                                />
+                            </div>
+                        </a>
+                        <span class="manufacturer">Lacoste</span>
+                        <div class="body">
+                            <h2 class="title">
+                                Giày Lacoste L005 222 Nam - Trắng Xanh
+                            </h2>
+                            <p class="price">
+                                3.390.000₫ <span class="sale"> 4.150.000₫</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <a href="../products/sp4.html">
+                            <div class="immedia">
+                                <div class="sale-new">
+                                    <span style="background-color: #0f3a8d"
+                                        >NEW</span
+                                    >
+                                    <span style="background-color: #e2293d"
+                                        >-20 %</span
+                                    >
+                                </div>
+                                <img
+                                    src="../assets/imgs/product-4.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    src="../assets/imgs/product-4.1.jpg"
+                                    alt=""
+                                    class="img-2"
+                                />
+                            </div>
+                        </a>
+                        <span class="manufacturer">Lacoste</span>
+                        <div class="body">
+                            <h2 class="title">
+                                Giày Lacoste Chaymon BL 22 2 Nam - Đen
+                            </h2>
+                            <p class="price">
+                                3.390.000₫ <span class="sale"> 4.250.000₫</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <a href="../products/sp5.html">
+                            <div class="immedia">
+                                <div class="sale-new">
+                                    <span style="background-color: #0f3a8d"
+                                        >NEW</span
+                                    >
+                                    <span style="background-color: #e2293d"
+                                        >-26 %</span
+                                    >
+                                </div>
+                                <img
+                                    src="../assets/imgs/product-5.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    src="../assets/imgs/product-5.1.jpg"
+                                    alt=""
+                                    class="img-2"
+                                />
+                            </div>
+                        </a>
+                        <span class="manufacturer">Lacoste</span>
+                        <div class="body">
+                            <h2 class="title">
+                                Giày Lacoste Europa Tri 1 Nam - Trắng
+                            </h2>
+                            <p class="price">
+                                2.690.000₫ <span class="sale"> 3.650.000₫</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <a href="../products/sp6.html">
+                            <div class="immedia">
+                                <div class="sale-new">
+                                    <span style="background-color: #0f3a8d"
+                                        >NEW</span
+                                    >
+                                    <span style="background-color: #e2293d"
+                                        >-31 %</span
+                                    >
+                                </div>
+                                <img
+                                    src="../assets/imgs/product-6.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    src="../assets/imgs/product-6.1.jpg"
+                                    alt=""
+                                    class="img-2"
+                                />
+                            </div>
+                        </a>
+                        <span class="manufacturer">Adidas</span>
+                        <div class="body">
+                            <h2 class="title">
+                                Giày adidas Adizero RC 4 Wide Nam - Đen Trắng
+                            </h2>
+                            <p class="price">
+                                1.990.000₫ <span class="sale"> 2.880.000₫</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <a href="../products/sp7.html">
+                            <div class="immedia">
+                                <div class="sale-new">
+                                    <span style="background-color: #0f3a8d"
+                                        >NEW</span
+                                    >
+                                    <span style="background-color: #e2293d"
+                                        >-17 %</span
+                                    >
+                                </div>
+                                <img
+                                    src="../assets/imgs/product-7.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    src="../assets/imgs/product-7.1.jpg"
+                                    alt=""
+                                    class="img-2"
+                                />
+                            </div>
+                        </a>
+                        <span class="manufacturer">Nike</span>
+                        <div class="body">
+                            <h2 class="title">
+                                Giày Nike Renew Run 3 Nam - Đen Trắng
+                            </h2>
+                            <p class="price">
+                                2.190.000₫ <span class="sale">2.639.000₫</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <a href="../products/sp8.html">
+                            <div class="immedia">
+                                <div class="sale-new">
+                                    <span style="background-color: #0f3a8d"
+                                        >NEW</span
+                                    >
+                                    <span style="background-color: #e2293d"
+                                        >-19 %</span
+                                    >
+                                </div>
+                                <img
+                                    src="../assets/imgs/product-8.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    src="../assets/imgs/product-8.1.jpg"
+                                    alt=""
+                                    class="img-2"
+                                />
+                            </div>
+                        </a>
+                        <span class="manufacturer">Nike</span>
+                        <div class="body">
+                            <h2 class="title">
+                                Giày Nike Air Max Excee Nữ - Trắng
+                            </h2>
+                            <p class="price">
+                                2.390.000₫ <span class="sale"> 2.950.000₫</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <a href="../products/sp9.html">
+                            <div class="immedia">
+                                <div class="sale-new">
+                                    <span style="background-color: #0f3a8d"
+                                        >NEW</span
+                                    >
+                                    <span style="background-color: #e2293d"
+                                        >-21 %</span
+                                    >
+                                </div>
+                                <img
+                                    src="../assets/imgs/product-9.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    src="../assets/imgs/product-9.1.jpg"
+                                    alt=""
+                                    class="img-2"
+                                />
+                            </div>
+                        </a>
+                        <span class="manufacturer">Nike</span>
+                        <div class="body">
+                            <h2 class="title">
+                                Giày Nike City Trainer 3 Nữ - Xám Hồng
+                            </h2>
+                            <p class="price">
+                                1.390.000₫
+                                <span class="sale">1.750.000₫</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <a href="../products/sp10.html">
+                            <div class="immedia">
+                                <div class="sale-new">
+                                    <span style="background-color: #0f3a8d"
+                                        >NEW</span
+                                    >
+                                    <span style="background-color: #e2293d"
+                                        >-8 %</span
+                                    >
+                                </div>
+                                <img
+                                    src="../assets/imgs/product-10.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    src="../assets/imgs/product-10.1.jpg"
+                                    alt=""
+                                    class="img-2"
+                                />
+                            </div>
+                        </a>
+                        <span class="manufacturer">Nike</span>
+                        <div class="body">
+                            <h2 class="title">
+                                Giày Nike Downshifter 12 Nam - Trắng Xanh
+                            </h2>
+                            <p class="price">
+                                1.790.000₫ <span class="sale"> 1.950.000₫</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <a href="../products/sp11.html">
+                            <div class="immedia">
+                                <div class="sale-new">
+                                    <span style="background-color: #0f3a8d"
+                                        >NEW</span
+                                    >
+                                    <span style="background-color: #e2293d"
+                                        >-18 %</span
+                                    >
+                                </div>
+                                <img
+                                    src="../assets/imgs/product-11.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    src="../assets/imgs/product-11.1.jpg"
+                                    alt=""
+                                    class="img-2"
+                                />
+                            </div>
+                        </a>
+                        <span class="manufacturer">Nike</span>
+                        <div class="body">
+                            <h2 class="title">
+                                Giày Nike Court Vision Low Nam - Đen Xanh
+                            </h2>
+                            <p class="price">
+                                2.090.000₫ <span class="sale"> 2.500.000₫</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <a href="./products/sp12.html">
+                            <div class="immedia">
+                                <div class="sale-new">
+                                    <span style="background-color: #0f3a8d"
+                                        >NEW</span
+                                    >
+                                    <span style="background-color: #e2293d"
+                                        >-18 %</span
+                                    >
+                                </div>
+                                <img
+                                    src="../assets/imgs/product-12.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    src="../assets/imgs/product-12.1.jpg"
+                                    alt=""
+                                    class="img-2"
+                                />
+                            </div>
+                        </a>
+                        <span class="manufacturer">Nike</span>
+                        <div class="body">
+                            <h2 class="title">
+                                Giày Nike Flex Control TR4 Nam - Đen Trắng
+                            </h2>
+                            <p class="price">
+                                1.890.000₫<span class="sale"> 2.250.000₫</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <footer class="footer">
@@ -226,15 +690,17 @@
                 </form>
             </div>
         </div>
+        <div class="choice-size">
+            <div class="content">
+                <img src="./assets/imgs/chon-size.png" alt="" />
+            </div>
+        </div>
         <script>
             const progressBar = document.querySelector(".progress-bar");
-            function resizeIframe(height) {
-                var iframe = document.querySelector(".main-iframe");
-                iframe.style = `height: ${height}px`;
-                window.scrollTo(0, 0);
+            function resizeIframe(value) {
+                window.location.assign(value);
             }
-
-            window.addEventListener("scroll", function () {
+            window.addEventListener("scroll", function (e) {
                 const scrollTop = window.pageYOffset;
                 const scrollBar =
                     document.documentElement.scrollHeight - window.innerHeight;
@@ -242,6 +708,7 @@
                 progressBar.style.width = scrollWidth + "%";
             });
         </script>
+        <script src="./href.js/trangchu.js"></script>
         <script src="./app.js"></script>
     </body>
 </html>

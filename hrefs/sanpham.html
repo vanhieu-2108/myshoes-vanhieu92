@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>My Shoes</title>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -16,390 +16,699 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="../assets/css/reset.css" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
         <link rel="stylesheet" href="../hrefs.css/sanpham.css" />
     </head>
     <body>
-        <div class="heading">
+        <div class="progress-bar"></div>
+        <header class="header">
+            <div class="content">
+                <div class="body">
+                    <!-- Logo -->
+                    <img
+                        src="../assets/imgs/logo.png"
+                        alt="myshoes"
+                        class="img-logo"
+                    />
+                    <!-- Form search -->
+                    <div class="form-search">
+                        <input
+                            type="search"
+                            placeholder="Tìm kiếm sản phẩm..."
+                            class="input-search"
+                        />
+                        <button class="btn-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <!-- Form login -->
+                    <div class="container">
+                        <div class="form-loggin">
+                            <div class="user">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="title hover-log">
+                                <p class="username">Tài khoản</p>
+                                <span>Đăng nhập / Đăng ký</span>
+                            </div>
+                            <div class="form-sign">
+                                <span class="sign-in">
+                                    <i
+                                        class="fa-solid fa-user"
+                                        style="font-size: 16px"
+                                    ></i>
+                                    Đăng nhập
+                                </span>
+                                <span class="sign-up">
+                                    <i
+                                        class="fa-regular fa-user"
+                                        style="font-size: 16px"
+                                    >
+                                    </i>
+                                    Đăng ký
+                                </span>
+                            </div>
+                        </div>
+                        <div class="bag">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="nav fixed">
+            <div class="content">
+                <ul class="list">
+                    <li>
+                        <a href="#!" onclick="resizeSP('../index.html')"
+                            >Trang Chủ</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#!" onclick="resizeSP('./gioithieu.html')"
+                            >Giới thiệu</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="./sanpham.html"
+                            onclick="resizeSP('./sanpham.html')"
+                            >Sản phẩm</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="./hrefs/lienhe.html"
+                            target="load"
+                            onclick="resizeSP('./lienhe.html')"
+                            >Liên hệ</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="heading-2">
             <h2 class="title">SẢN PHẨM PHỔ BIẾN</h2>
             <p class="desc">#NEW</p>
         </div>
-        <div class="list-products">
-            <div class="product-item">
-                <div class="sale-new">
-                    <span style="background-color: #0f3a8d">NEW</span>
-                    <span style="background-color: #e2293d">-18 %</span>
-                </div>
-                <div class="immedia">
-                    <img src="../assets/imgs/product-1.jpg" alt="" />
-                    <img
-                        src="../assets/imgs/product-1.1.jpg"
-                        alt=""
-                        class="img-2"
-                    />
-                </div>
-                <span class="manufacturer">Puma</span>
-                <div class="body">
-                    <h2 class="title">Giày Puma Taper Nam - Trắng</h2>
-                    <p class="price">
-                        1.390.000₫ <span class="sale"> 1.700.000₫</span>
-                    </p>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="immedia">
-                    <div class="sale-new">
-                        <span style="background-color: #0f3a8d">NEW</span>
-                        <span style="background-color: #e2293d">-16 %</span>
-                    </div>
-                    <img src="../assets/imgs/product-2.jpg" alt="" />
-                    <img
-                        src="../assets/imgs/product-2.1.jpg"
-                        alt=""
-                        class="img-2"
-                    />
-                </div>
-                <span class="manufacturer">Adidas</span>
-                <div class="body">
-                    <h2 class="title">
-                        Giày adidas Adizero RC 5 Nam - Đen Trắng
-                    </h2>
-                    <p class="price">
-                        2.490.000₫ <span class="sale"> 2.950.000₫</span>
-                    </p>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="immedia">
+        <main>
+            <div class="list-products">
+                <div class="product-item">
                     <div class="sale-new">
                         <span style="background-color: #0f3a8d">NEW</span>
                         <span style="background-color: #e2293d">-18 %</span>
                     </div>
-                    <img src="../assets/imgs/product-3.jpg" alt="" />
-                    <img
-                        src="../assets/imgs/product-3.1.jpg"
-                        alt=""
-                        class="img-2"
-                    />
+                    <a href="../products/sp1.html">
+                        <div class="immedia">
+                            <img src="../assets/imgs/product-1.jpg" alt="" />
+                            <img
+                                src="../assets/imgs/product-1.1.jpg"
+                                alt=""
+                                class="img-2"
+                            />
+                        </div>
+                    </a>
+                    <span class="manufacturer">Puma</span>
+                    <div class="body">
+                        <h2 class="title">Giày Puma Taper Nam - Trắng</h2>
+                        <p class="price">
+                            1.390.000₫ <span class="sale"> 1.700.000₫</span>
+                        </p>
+                    </div>
                 </div>
-                <span class="manufacturer">Lacoste</span>
-                <div class="body">
-                    <h2 class="title">
-                        Giày Lacoste L005 222 Nam - Trắng Xanh
-                    </h2>
-                    <p class="price">
-                        3.390.000₫ <span class="sale"> 4.150.000₫</span>
-                    </p>
+                <div class="product-item">
+                    <a href="../products/sp2.html">
+                        <div class="immedia">
+                            <div class="sale-new">
+                                <span style="background-color: #0f3a8d"
+                                    >NEW</span
+                                >
+                                <span style="background-color: #e2293d"
+                                    >-16 %</span
+                                >
+                            </div>
+                            <img src="../assets/imgs/product-2.jpg" alt="" />
+                            <img
+                                src="../assets/imgs/product-2.1.jpg"
+                                alt=""
+                                class="img-2"
+                            />
+                        </div>
+                    </a>
+                    <span class="manufacturer">Adidas</span>
+                    <div class="body">
+                        <h2 class="title">
+                            Giày adidas Adizero RC 5 Nam - Đen Trắng
+                        </h2>
+                        <p class="price">
+                            2.490.000₫ <span class="sale"> 2.950.000₫</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <a href="../products/sp3.html">
+                        <div class="immedia">
+                            <div class="sale-new">
+                                <span style="background-color: #0f3a8d"
+                                    >NEW</span
+                                >
+                                <span style="background-color: #e2293d"
+                                    >-18 %</span
+                                >
+                            </div>
+                            <img src="../assets/imgs/product-3.jpg" alt="" />
+                            <img
+                                src="../assets/imgs/product-3.1.jpg"
+                                alt=""
+                                class="img-2"
+                            />
+                        </div>
+                    </a>
+                    <span class="manufacturer">Lacoste</span>
+                    <div class="body">
+                        <h2 class="title">
+                            Giày Lacoste L005 222 Nam - Trắng Xanh
+                        </h2>
+                        <p class="price">
+                            3.390.000₫ <span class="sale"> 4.150.000₫</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <a href="../products/sp4.html">
+                        <div class="immedia">
+                            <div class="sale-new">
+                                <span style="background-color: #0f3a8d"
+                                    >NEW</span
+                                >
+                                <span style="background-color: #e2293d"
+                                    >-20 %</span
+                                >
+                            </div>
+                            <img src="../assets/imgs/product-4.jpg" alt="" />
+                            <img
+                                src="../assets/imgs/product-4.1.jpg"
+                                alt=""
+                                class="img-2"
+                            />
+                        </div>
+                    </a>
+                    <span class="manufacturer">Lacoste</span>
+                    <div class="body">
+                        <h2 class="title">
+                            Giày Lacoste Chaymon BL 22 2 Nam - Đen
+                        </h2>
+                        <p class="price">
+                            3.390.000₫ <span class="sale"> 4.250.000₫</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <a href="../products/sp5.html">
+                        <div class="immedia">
+                            <div class="sale-new">
+                                <span style="background-color: #0f3a8d"
+                                    >NEW</span
+                                >
+                                <span style="background-color: #e2293d"
+                                    >-26 %</span
+                                >
+                            </div>
+                            <img src="../assets/imgs/product-5.jpg" alt="" />
+                            <img
+                                src="../assets/imgs/product-5.1.jpg"
+                                alt=""
+                                class="img-2"
+                            />
+                        </div>
+                    </a>
+                    <span class="manufacturer">Lacoste</span>
+                    <div class="body">
+                        <h2 class="title">
+                            Giày Lacoste Europa Tri 1 Nam - Trắng
+                        </h2>
+                        <p class="price">
+                            2.690.000₫ <span class="sale"> 3.650.000₫</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <a href="../products/sp6.html">
+                        <div class="immedia">
+                            <div class="sale-new">
+                                <span style="background-color: #0f3a8d"
+                                    >NEW</span
+                                >
+                                <span style="background-color: #e2293d"
+                                    >-31 %</span
+                                >
+                            </div>
+                            <img src="../assets/imgs/product-6.jpg" alt="" />
+                            <img
+                                src="../assets/imgs/product-6.1.jpg"
+                                alt=""
+                                class="img-2"
+                            />
+                        </div>
+                    </a>
+                    <span class="manufacturer">Adidas</span>
+                    <div class="body">
+                        <h2 class="title">
+                            Giày adidas Adizero RC 4 Wide Nam - Đen Trắng
+                        </h2>
+                        <p class="price">
+                            1.990.000₫ <span class="sale"> 2.880.000₫</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <a href="../products/sp7.html">
+                        <div class="immedia">
+                            <div class="sale-new">
+                                <span style="background-color: #0f3a8d"
+                                    >NEW</span
+                                >
+                                <span style="background-color: #e2293d"
+                                    >-17 %</span
+                                >
+                            </div>
+                            <img src="../assets/imgs/product-7.jpg" alt="" />
+                            <img
+                                src="../assets/imgs/product-7.1.jpg"
+                                alt=""
+                                class="img-2"
+                            />
+                        </div>
+                    </a>
+                    <span class="manufacturer">Nike</span>
+                    <div class="body">
+                        <h2 class="title">
+                            Giày Nike Renew Run 3 Nam - Đen Trắng
+                        </h2>
+                        <p class="price">
+                            2.190.000₫ <span class="sale">2.639.000₫</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <a href="../products/sp8.html">
+                        <div class="immedia">
+                            <div class="sale-new">
+                                <span style="background-color: #0f3a8d"
+                                    >NEW</span
+                                >
+                                <span style="background-color: #e2293d"
+                                    >-19 %</span
+                                >
+                            </div>
+                            <img src="../assets/imgs/product-8.jpg" alt="" />
+                            <img
+                                src="../assets/imgs/product-8.1.jpg"
+                                alt=""
+                                class="img-2"
+                            />
+                        </div>
+                    </a>
+                    <span class="manufacturer">Nike</span>
+                    <div class="body">
+                        <h2 class="title">
+                            Giày Nike Air Max Excee Nữ - Trắng
+                        </h2>
+                        <p class="price">
+                            2.390.000₫ <span class="sale"> 2.950.000₫</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <a href="../products/sp9.html">
+                        <div class="immedia">
+                            <div class="sale-new">
+                                <span style="background-color: #0f3a8d"
+                                    >NEW</span
+                                >
+                                <span style="background-color: #e2293d"
+                                    >-21 %</span
+                                >
+                            </div>
+                            <img src="../assets/imgs/product-9.jpg" alt="" />
+                            <img
+                                src="../assets/imgs/product-9.1.jpg"
+                                alt=""
+                                class="img-2"
+                            />
+                        </div>
+                    </a>
+                    <span class="manufacturer">Nike</span>
+                    <div class="body">
+                        <h2 class="title">
+                            Giày Nike City Trainer 3 Nữ - Xám Hồng
+                        </h2>
+                        <p class="price">
+                            1.390.000₫
+                            <span class="sale">1.750.000₫</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <a href="../products/sp10.html">
+                        <div class="immedia">
+                            <div class="sale-new">
+                                <span style="background-color: #0f3a8d"
+                                    >NEW</span
+                                >
+                                <span style="background-color: #e2293d"
+                                    >-8 %</span
+                                >
+                            </div>
+                            <img src="../assets/imgs/product-10.jpg" alt="" />
+                            <img
+                                src="../assets/imgs/product-10.1.jpg"
+                                alt=""
+                                class="img-2"
+                            />
+                        </div>
+                    </a>
+                    <span class="manufacturer">Nike</span>
+                    <div class="body">
+                        <h2 class="title">
+                            Giày Nike Downshifter 12 Nam - Trắng Xanh
+                        </h2>
+                        <p class="price">
+                            1.790.000₫ <span class="sale"> 1.950.000₫</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <a href="../products/sp11.html">
+                        <div class="immedia">
+                            <div class="sale-new">
+                                <span style="background-color: #0f3a8d"
+                                    >NEW</span
+                                >
+                                <span style="background-color: #e2293d"
+                                    >-18 %</span
+                                >
+                            </div>
+                            <img src="../assets/imgs/product-11.jpg" alt="" />
+                            <img
+                                src="../assets/imgs/product-11.1.jpg"
+                                alt=""
+                                class="img-2"
+                            />
+                        </div>
+                    </a>
+                    <span class="manufacturer">Nike</span>
+                    <div class="body">
+                        <h2 class="title">
+                            Giày Nike Court Vision Low Nam - Đen Xanh
+                        </h2>
+                        <p class="price">
+                            2.090.000₫ <span class="sale"> 2.500.000₫</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <a href="../products/sp12.html">
+                        <div class="immedia">
+                            <div class="sale-new">
+                                <span style="background-color: #0f3a8d"
+                                    >NEW</span
+                                >
+                                <span style="background-color: #e2293d"
+                                    >-18 %</span
+                                >
+                            </div>
+                            <img src="../assets/imgs/product-12.jpg" alt="" />
+                            <img
+                                src="../assets/imgs/product-12.1.jpg"
+                                alt=""
+                                class="img-2"
+                            />
+                        </div>
+                    </a>
+                    <span class="manufacturer">Nike</span>
+                    <div class="body">
+                        <h2 class="title">
+                            Giày Nike Flex Control TR4 Nam - Đen Trắng
+                        </h2>
+                        <p class="price">
+                            1.890.000₫<span class="sale"> 2.250.000₫</span>
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="product-item">
-                <div class="immedia">
-                    <div class="sale-new">
-                        <span style="background-color: #0f3a8d">NEW</span>
-                        <span style="background-color: #e2293d">-20 %</span>
+            <div class="heading-2">
+                <h2 class="title">SẢN PHẨM KHÁC</h2>
+                <p class="desc">#HOT</p>
+            </div>
+            <div class="list-products">
+                <div class="product-item">
+                    <a href="../products/sp15.html">
+                        <div class="immedia">
+                            <div class="sale-new">
+                                <span
+                                    style="
+                                        background-color: #f1ca50;
+                                        color: black;
+                                    "
+                                    >HOT</span
+                                >
+                                <span style="background-color: #e2293d"
+                                    >-48 %</span
+                                >
+                            </div>
+                            <img src="../assets/imgs/spkhac1.jpg" alt="" />
+                            <img
+                                src="../assets/imgs/spkhac1.1.jpg"
+                                alt=""
+                                class="img-2"
+                            />
+                        </div>
+                    </a>
+                    <span class="manufacturer">Mycare</span>
+                    <div class="body">
+                        <h2 class="title">
+                            Combo Xịt Bọt ION Làm Sạch Giày Mycare 300ml + Bàn
+                            Chải + Khăn Lau
+                        </h2>
+                        <p class="price">
+                            129.000₫<span class="sale">250.000₫</span>
+                        </p>
                     </div>
-                    <img src="../assets/imgs/product-4.jpg" alt="" />
-                    <img
-                        src="../assets/imgs/product-4.1.jpg"
-                        alt=""
-                        class="img-2"
-                    />
                 </div>
-                <span class="manufacturer">Lacoste</span>
-                <div class="body">
-                    <h2 class="title">
-                        Giày Lacoste Chaymon BL 22 2 Nam - Đen
-                    </h2>
-                    <p class="price">
-                        3.390.000₫ <span class="sale"> 4.250.000₫</span>
-                    </p>
+                <div class="product-item">
+                    <a href="../products/sp16.html">
+                        <div class="immedia">
+                            <div class="sale-new">
+                                <span
+                                    style="
+                                        background-color: #f1ca50;
+                                        color: black;
+                                    "
+                                    >HOT</span
+                                >
+                                <span style="background-color: #e2293d"
+                                    >-51 %</span
+                                >
+                            </div>
+                            <img src="../assets/imgs/spkhac2.jpg" alt="" />
+                            <img
+                                src="../assets/imgs/spkhac1.1.jpg"
+                                alt=""
+                                class="img-2"
+                            />
+                        </div>
+                    </a>
+                    <span class="manufacturer">Mycare</span>
+                    <div class="body">
+                        <h2 class="title">
+                            Xịt Bọt ION Làm Sạch Giày Mycare Foaming Cleaner
+                            300ml
+                        </h2>
+                        <p class="price">
+                            99.000₫<span class="sale"> 200.000₫</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <a href="../products/sp17.html">
+                        <div class="immedia">
+                            <div class="sale-new">
+                                <span
+                                    style="
+                                        background-color: #f1ca50;
+                                        color: black;
+                                    "
+                                    >HOT</span
+                                >
+                                <span style="background-color: #e2293d"
+                                    >-36 %</span
+                                >
+                            </div>
+                            <img src="../assets/imgs/spkhac3.jpg" alt="" />
+                            <img
+                                src="../assets/imgs/spkhac3.1.jpg"
+                                alt=""
+                                class="img-2"
+                            />
+                        </div>
+                    </a>
+                    <span class="manufacturer">Mycare</span>
+                    <div class="body">
+                        <h2 class="title">
+                            Xịt Nano Chống Nước Mycare Nano Protect 200ml
+                        </h2>
+                        <p class="price">
+                            99.000₫<span class="sale"> 155.000₫</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <a href="../products/sp18.html">
+                        <div class="immedia">
+                            <div class="sale-new">
+                                <span
+                                    style="
+                                        background-color: #f1ca50;
+                                        color: black;
+                                    "
+                                    >HOT</span
+                                >
+                                <span style="background-color: #e2293d"
+                                    >-52 %</span
+                                >
+                            </div>
+                            <img src="../assets/imgs/spkhac4.jpg" alt="" />
+                            <img
+                                src="../assets/imgs/spkhac4.1.jpg"
+                                alt=""
+                                class="img-2"
+                            />
+                        </div>
+                    </a>
+                    <span class="manufacturer">Mycare</span>
+                    <div class="body">
+                        <h2 class="title">
+                            Bộ Vệ Sinh Giày Cao Cấp Mycare Shoe Cleaner Kit
+                        </h2>
+                        <p class="price">
+                            159.000₫<span class="sale"> 330.000₫</span>
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="product-item">
-                <div class="immedia">
-                    <div class="sale-new">
-                        <span style="background-color: #0f3a8d">NEW</span>
-                        <span style="background-color: #e2293d">-26 %</span>
+        </main>
+        <footer class="footer" style="margin-top: 20px">
+            <div class="content">
+                <div class="row">
+                    <div class="column">
+                        <h2 class="heading">MYSHOES.VN - GIÀY CHÍNH HÃNG</h2>
+
+                        <img src="../assets/imgs/logo-foot.png" alt="" />
+                        <p class="desc">
+                            Myshoes.vn được định hướng trở thành hệ thống thương
+                            mại điện tử bán giày chính hãng hàng đầu Việt Nam.
+                            Showroom: 249 Xã Đàn, Đống Đa, Hà Nội Hotline:
+                            0973711868
+                        </p>
                     </div>
-                    <img src="../assets/imgs/product-5.jpg" alt="" />
-                    <img
-                        src="../assets/imgs/product-5.1.jpg"
-                        alt=""
-                        class="img-2"
-                    />
-                </div>
-                <span class="manufacturer">Lacoste</span>
-                <div class="body">
-                    <h2 class="title">Giày Lacoste Europa Tri 1 Nam - Trắng</h2>
-                    <p class="price">
-                        2.690.000₫ <span class="sale"> 3.650.000₫</span>
-                    </p>
+                    <div class="column">
+                        <h2 class="heading">VỀ CHÚNG TÔI</h2>
+                        <ul class="list">
+                            <li>
+                                <a href="#!">Giới thiệu</a>
+                            </li>
+                            <li>
+                                <a href="#!">Điều khoản sử dụng</a>
+                            </li>
+                            <li>
+                                <a href="#!">Chính sách bảo mật </a>
+                            </li>
+                            <li>
+                                <a href="#!">Cơ hội việc làm</a>
+                            </li>
+                            <li>
+                                <a href="#!">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h2 class="heading">KHÁCH HÀNG</h2>
+                        <ul class="list">
+                            <li>
+                                <a href="#!">Hướng dẫn mua hàng</a>
+                            </li>
+                            <li>
+                                <a href="#!">Chính sách đổi trả</a>
+                            </li>
+                            <li>
+                                <a href="#!">Chính sách bảo hành</a>
+                            </li>
+                            <li>
+                                <a href="#!">Hướng dẫn chọn size</a>
+                            </li>
+                            <li>
+                                <a href="#!">Chương trình khuyến mại</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h2 class="heading heading-last">CHỨNG NHẬN</h2>
+                        <div class="img-wrapper">
+                            <img src="../assets/imgs/foot-img-1.png" alt="" />
+                            <img
+                                src="../assets/imgs/foot-img-12png.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="product-item">
-                <div class="immedia">
-                    <div class="sale-new">
-                        <span style="background-color: #0f3a8d">NEW</span>
-                        <span style="background-color: #e2293d">-31 %</span>
-                    </div>
-                    <img src="../assets/imgs/product-6.jpg" alt="" />
-                    <img
-                        src="../assets/imgs/product-6.1.jpg"
-                        alt=""
-                        class="img-2"
+        </footer>
+        <div class="modal-login">
+            <div class="container">
+                <h2 class="title">THÔNG TIN ĐĂNG NHẬP</h2>
+                <form action="" class="form-sign-in">
+                    <input
+                        type="text"
+                        placeholder="Điện thoại/Email:"
+                        required
                     />
-                </div>
-                <span class="manufacturer">Adidas</span>
-                <div class="body">
-                    <h2 class="title">
-                        Giày adidas Adizero RC 4 Wide Nam - Đen Trắng
-                    </h2>
-                    <p class="price">
-                        1.990.000₫ <span class="sale"> 2.880.000₫</span>
-                    </p>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="immedia">
-                    <div class="sale-new">
-                        <span style="background-color: #0f3a8d">NEW</span>
-                        <span style="background-color: #e2293d">-17 %</span>
-                    </div>
-                    <img src="../assets/imgs/product-7.jpg" alt="" />
-                    <img
-                        src="../assets/imgs/product-7.1.jpg"
-                        alt=""
-                        class="img-2"
-                    />
-                </div>
-                <span class="manufacturer">Nike</span>
-                <div class="body">
-                    <h2 class="title">Giày Nike Renew Run 3 Nam - Đen Trắng</h2>
-                    <p class="price">
-                        2.190.000₫ <span class="sale">2.639.000₫</span>
-                    </p>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="immedia">
-                    <div class="sale-new">
-                        <span style="background-color: #0f3a8d">NEW</span>
-                        <span style="background-color: #e2293d">-19 %</span>
-                    </div>
-                    <img src="../assets/imgs/product-8.jpg" alt="" />
-                    <img
-                        src="../assets/imgs/product-8.1.jpg"
-                        alt=""
-                        class="img-2"
-                    />
-                </div>
-                <span class="manufacturer">Nike</span>
-                <div class="body">
-                    <h2 class="title">Giày Nike Air Max Excee Nữ - Trắng</h2>
-                    <p class="price">
-                        2.390.000₫ <span class="sale"> 2.950.000₫</span>
-                    </p>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="immedia">
-                    <div class="sale-new">
-                        <span style="background-color: #0f3a8d">NEW</span>
-                        <span style="background-color: #e2293d">-21 %</span>
-                    </div>
-                    <img src="../assets/imgs/product-9.jpg" alt="" />
-                    <img
-                        src="../assets/imgs/product-9.1.jpg"
-                        alt=""
-                        class="img-2"
-                    />
-                </div>
-                <span class="manufacturer">Nike</span>
-                <div class="body">
-                    <h2 class="title">
-                        Giày Nike City Trainer 3 Nữ - Xám Hồng
-                    </h2>
-                    <p class="price">
-                        1.390.000₫
-                        <span class="sale">1.750.000₫</span>
-                    </p>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="immedia">
-                    <div class="sale-new">
-                        <span style="background-color: #0f3a8d">NEW</span>
-                        <span style="background-color: #e2293d">-8 %</span>
-                    </div>
-                    <img src="../assets/imgs/product-10.jpg" alt="" />
-                    <img
-                        src="../assets/imgs/product-10.1.jpg"
-                        alt=""
-                        class="img-2"
-                    />
-                </div>
-                <span class="manufacturer">Nike</span>
-                <div class="body">
-                    <h2 class="title">
-                        Giày Nike Downshifter 12 Nam - Trắng Xanh
-                    </h2>
-                    <p class="price">
-                        1.790.000₫ <span class="sale"> 1.950.000₫</span>
-                    </p>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="immedia">
-                    <div class="sale-new">
-                        <span style="background-color: #0f3a8d">NEW</span>
-                        <span style="background-color: #e2293d">-18 %</span>
-                    </div>
-                    <img src="../assets/imgs/product-11.jpg" alt="" />
-                    <img
-                        src="../assets/imgs/product-11.1.jpg"
-                        alt=""
-                        class="img-2"
-                    />
-                </div>
-                <span class="manufacturer">Nike</span>
-                <div class="body">
-                    <h2 class="title">
-                        Giày Nike Court Vision Low Nam - Đen Xanh
-                    </h2>
-                    <p class="price">
-                        2.090.000₫ <span class="sale"> 2.500.000₫</span>
-                    </p>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="immedia">
-                    <div class="sale-new">
-                        <span style="background-color: #0f3a8d">NEW</span>
-                        <span style="background-color: #e2293d">-18 %</span>
-                    </div>
-                    <img src="../assets/imgs/product-12.jpg" alt="" />
-                    <img
-                        src="../assets/imgs/product-12.1.jpg"
-                        alt=""
-                        class="img-2"
-                    />
-                </div>
-                <span class="manufacturer">Nike</span>
-                <div class="body">
-                    <h2 class="title">
-                        Giày Nike Flex Control TR4 Nam - Đen Trắng
-                    </h2>
-                    <p class="price">
-                        1.890.000₫<span class="sale"> 2.250.000₫</span>
-                    </p>
-                </div>
+                    <input type="password" placeholder="Mật khẩu:" required />
+                    <button type="submit">ĐĂNG NHẬP</button>
+                </form>
             </div>
         </div>
-        <div class="heading">
-            <h2 class="title">SẢN PHẨM KHÁC</h2>
-            <p class="desc">#HOT</p>
-        </div>
-        <div class="list-products">
-            <div class="product-item">
-                <div class="immedia">
-                    <div class="sale-new">
-                        <span style="background-color: #f1ca50; color: black"
-                            >HOT</span
-                        >
-                        <span style="background-color: #e2293d">-48 %</span>
-                    </div>
-                    <img src="../assets/imgs/spkhac1.jpg" alt="" />
-                    <img
-                        src="../assets/imgs/spkhac1.1.jpg"
-                        alt=""
-                        class="img-2"
+        <div class="modal-sign-up">
+            <div class="container">
+                <h2 class="title">THÔNG TIN ĐĂNG KÝ</h2>
+                <form action="" class="form-sign-in">
+                    <input required type="text" placeholder="Họ và tên:" />
+                    <input required type="email" placeholder="Email:" />
+                    <input required type="text" placeholder="Điện thoại:" />
+                    <input required type="password" placeholder="Mật khẩu:" />
+                    <input
+                        required
+                        type="password"
+                        placeholder="Nhập lại mật khẩu:"
                     />
-                </div>
-                <span class="manufacturer">Mycare</span>
-                <div class="body">
-                    <h2 class="title">
-                        Combo Xịt Bọt ION Làm Sạch Giày Mycare 300ml + Bàn Chải
-                        + Khăn Lau
-                    </h2>
-                    <p class="price">
-                        129.000₫<span class="sale">250.000₫</span>
-                    </p>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="immedia">
-                    <div class="sale-new">
-                        <span style="background-color: #f1ca50; color: black"
-                            >HOT</span
-                        >
-                        <span style="background-color: #e2293d">-51 %</span>
-                    </div>
-                    <img src="../assets/imgs/spkhac2.jpg" alt="" />
-                    <img
-                        src="../assets/imgs/spkhac1.1.jpg"
-                        alt=""
-                        class="img-2"
-                    />
-                </div>
-                <span class="manufacturer">Mycare</span>
-                <div class="body">
-                    <h2 class="title">
-                        Xịt Bọt ION Làm Sạch Giày Mycare Foaming Cleaner 300ml
-                    </h2>
-                    <p class="price">
-                        99.000₫<span class="sale"> 200.000₫</span>
-                    </p>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="immedia">
-                    <div class="sale-new">
-                        <span style="background-color: #f1ca50; color: black"
-                            >HOT</span
-                        >
-                        <span style="background-color: #e2293d">-36 %</span>
-                    </div>
-                    <img src="../assets/imgs/spkhac3.jpg" alt="" />
-                    <img
-                        src="../assets/imgs/spkhac3.1.jpg"
-                        alt=""
-                        class="img-2"
-                    />
-                </div>
-                <span class="manufacturer">Mycare</span>
-                <div class="body">
-                    <h2 class="title">
-                        Xịt Nano Chống Nước Mycare Nano Protect 200ml
-                    </h2>
-                    <p class="price">
-                        99.000₫<span class="sale"> 155.000₫</span>
-                    </p>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="immedia">
-                    <div class="sale-new">
-                        <span style="background-color: #f1ca50; color: black"
-                            >HOT</span
-                        >
-                        <span style="background-color: #e2293d">-52 %</span>
-                    </div>
-                    <img src="../assets/imgs/spkhac4.jpg" alt="" />
-                    <img
-                        src="../assets/imgs/spkhac4.1.jpg"
-                        alt=""
-                        class="img-2"
-                    />
-                </div>
-                <span class="manufacturer">Mycare</span>
-                <div class="body">
-                    <h2 class="title">
-                        Bộ Vệ Sinh Giày Cao Cấp Mycare Shoe Cleaner Kit
-                    </h2>
-                    <p class="price">
-                        159.000₫<span class="sale"> 330.000₫</span>
-                    </p>
-                </div>
+                    <button type="submit">ĐĂNG KÝ</button>
+                </form>
             </div>
         </div>
+        <script>
+            const progressBar = document.querySelector(".progress-bar");
+            window.addEventListener("scroll", function (e) {
+                const scrollTop = window.pageYOffset;
+                const scrollBar =
+                    document.documentElement.scrollHeight - window.innerHeight;
+                const scrollWidth = Math.round((scrollTop / scrollBar) * 100);
+                progressBar.style.width = scrollWidth + "%";
+            });
+            function resizeSP(value) {
+                window.location.assign(value);
+            }
+        </script>
+        <script src="../app.js"></script>
     </body>
 </html>

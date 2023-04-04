@@ -131,12 +131,12 @@ body {
 }
 
 /* Products */
-.heading {
+.heading-2 {
     margin-top: 60px;
     text-align: center;
 }
 
-.heading .title {
+.heading-2 .title {
     font-size: 22px;
     color: #3a4754;
     font-weight: 700;
@@ -144,7 +144,7 @@ body {
     position: relative;
 }
 
-.heading .title::after {
+.heading-2 .title::after {
     content: "";
     display: block;
     position: absolute;
@@ -157,7 +157,7 @@ body {
     border-radius: 2px;
 }
 
-.heading .desc {
+.heading-2 .desc {
     margin-top: 20px;
     color: #3a4754;
 }
@@ -205,9 +205,9 @@ body {
     display: block;
 }
 
-.product-item .immedia:hover .img-2 {
+/* .product-item .immedia:hover .img-2 {
     z-index: 1;
-}
+} */
 
 .product-item .immedia .img-2 {
     position: absolute;
