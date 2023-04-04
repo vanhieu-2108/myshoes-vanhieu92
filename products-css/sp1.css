@@ -45,6 +45,7 @@ main {
     height: 68px;
     border: 1px solid #ccc;
     margin-bottom: 5px;
+    cursor: pointer;
 }
 
 .product-left .item:hover {
