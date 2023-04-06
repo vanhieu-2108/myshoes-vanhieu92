@@ -4,7 +4,7 @@
 
 html,
 body {
-    /* scroll-behavior: smooth; */
+    user-select: none;
 }
 
 body {
@@ -156,18 +156,27 @@ body {
     position: relative;
     color: #fff;
     cursor: pointer;
+    --text--: "0";
+    z-index: 999999;
+    padding-bottom: 10px;
+}
+
+.header .container .bag * {
+    pointer-events: none;
 }
 
 .header .container .bag::before {
-    content: "0";
+    content: var(--text--);
     display: inline-block;
     background-color: #f00;
     position: absolute;
+    width: 25px;
+    text-align: center;
     font-size: 14px;
-    padding: 5px;
+    padding: 5px 0;
     border-radius: 10px;
     top: -10px;
-    right: -10px;
+    right: -15px;
 }
 
 /* Nav */
@@ -327,11 +336,20 @@ body {
     display: block;
     width: 100%;
     padding: 15px;
-    margin-bottom: 20px;
     outline: none;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
+.username-sign-in,
+.passworld-sign-in {
+    color: 14px;
+    padding: 8px 0;
+    margin-left: 10px;
+    font-size: 14px;
+    opacity: 0;
+}
+
 .modal-sign-up .container button,
 .modal-login .container button {
     width: 100%;

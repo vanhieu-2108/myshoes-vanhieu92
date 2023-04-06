@@ -99,16 +99,16 @@ iframe {
 }
 
 .form-right .form-group {
-    margin-top: 20px;
+    margin-top: 15px;
+    --primary--color: #ccc;
 }
 .form-right .form-group .name,
 .form-right .form-group .email {
     width: 90%;
     display: block;
-    margin-bottom: 20px;
     padding: 15px 10px;
     outline: none;
-    border: 1px solid #ccc;
+    border: 1px solid var(--primary--color);
     border-radius: 4px;
 }
 
@@ -116,7 +116,7 @@ iframe {
     width: 90%;
     outline: none;
     padding: 15px 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--primary--color);
     border-radius: 4px;
 }
 
@@ -131,11 +131,57 @@ iframe {
 }
 
 .form-right button {
-    margin-top: 20px;
     width: 90%;
     padding: 15px 0;
     border: 0;
     background: #0f45ac;
     color: #fff;
     cursor: pointer;
+}
+
+.username-p,
+.email-p,
+.info-p,
+.chinhsach-p {
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: 500;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    opacity: 0;
+}
+
+.wrapper-csbm {
+    position: fixed;
+    inset: 0;
+    z-index: 999999999999;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    animation: fadeInn 1s forwards;
+}
+
+@keyframes fadeInn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.wrapper-csbm.active {
+    display: flex;
+}
+
+.content-csbm {
+    width: 1200px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.content-csbm img {
+    width: 100%;
 }

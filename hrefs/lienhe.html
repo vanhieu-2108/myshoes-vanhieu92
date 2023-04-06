@@ -162,24 +162,24 @@
                             type="text"
                             placeholder="Họ và tên"
                             class="name"
-                            required
                             name="username"
                         />
+                        <p class="username-p">Vui lòng không được để trống.</p>
                         <input
                             type="email"
                             placeholder="Email"
                             class="email"
-                            required
                             name="email"
                         />
+                        <p class="email-p">Vui lòng không được để trống.</p>
                         <textarea
                             name="info"
                             id=""
                             cols="30"
                             rows="6"
                             placeholder="Thông tin"
-                            required
                         ></textarea>
+                        <p class="info-p">Vui lòng không được để trống.</p>
                         <div class="confirm">
                             <input
                                 type="checkbox"
@@ -190,7 +190,15 @@
                             <label for="check" style="cursor: pointer"
                                 >Tôi đã đọc và đồng ý với
                             </label>
-                            <span><a href="#!">Chính sách bảo mật</a></span>
+                            <span
+                                ><a href="#!" onclick="handleCSBM()"
+                                    >Chính sách bảo mật</a
+                                ></span
+                            >
+                            <p class="chinhsach-p">
+                                Vui lòng click vào ô đồng ý với chính sách bảo
+                                mật.
+                            </p>
                         </div>
                         <button type="submit">XÁC NHẬN</button>
                     </form>
@@ -267,12 +275,8 @@
             <div class="container">
                 <h2 class="title">THÔNG TIN ĐĂNG NHẬP</h2>
                 <form action="" class="form-sign-in">
-                    <input
-                        type="text"
-                        placeholder="Điện thoại/Email:"
-                        required
-                    />
-                    <input type="password" placeholder="Mật khẩu:" required />
+                    <input type="text" placeholder="Điện thoại/Email:" />
+                    <input type="" placeholder="Mật khẩu:" />
                     <button type="submit">ĐĂNG NHẬP</button>
                 </form>
             </div>
@@ -294,29 +298,99 @@
                 </form>
             </div>
         </div>
-        <div class="choice-size">
-            <div class="content">
-                <img src="./assets/imgs/chon-size.png" alt="" />
+        <div class="wrapper-csbm">
+            <div class="content-csbm">
+                <img src="../assets/imgs/chinhsachbaomat.png" alt="" />
             </div>
         </div>
         <script>
             const form = document.querySelector(".form-group");
+            const csbm = document.querySelector(".wrapper-csbm");
             const progressBar = document.querySelector(".progress-bar");
             const load = document.querySelector(".load");
+            const usernameP = document.querySelector(".username-p");
+            const emailP = document.querySelector(".email-p");
+            const infoP = document.querySelector(".info-p");
+            const chinhsachP = document.querySelector(".chinhsach-p");
+            const input = document.querySelectorAll("input");
+            function handleCSBM() {
+                csbm.classList.add("active");
+            }
+            document.body.addEventListener("click", function (e) {
+                if (e.target.matches(".wrapper-csbm")) {
+                    e.target.classList.remove("active");
+                }
+            });
+            let regexHoten =
+                /^(([a-zA-Z\sÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]*)([a-zA-Z\s\'ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]*)([a-zA-Z\sÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]))*$/;
+            let regexEmail =
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             form.addEventListener("submit", function (e) {
                 e.preventDefault();
-                form.elements["email"].value = "";
-                form.elements["username"].value = "";
-                form.elements["info"].value = "";
-                alert(
-                    "Chúng tôi đã nhận email và thông tin của bạn xin vui lòng đợi phản hồi từ chúng tôi xin cảm ơn."
-                );
-                form.elements["check"].checked = false;
+                let isValid = true;
+                if (regexHoten.test(form.elements[0].value)) {
+                    form.elements[0].style = "border-color: green";
+                    usernameP.style = "color: green; opacity: 1";
+                    usernameP.innerText = "Họ tên hợp lệ.";
+                } else {
+                    isValid = false;
+                    form.elements[0].style = "border-color: red";
+                    usernameP.style = "color: red; opacity: 1";
+                    usernameP.innerText = "Họ tên không đúng định dạng.";
+                }
+                if (form.elements[0].value.trim() === "") {
+                    isValid = false;
+                    form.elements[0].style = "border-color: red";
+                    usernameP.style = "color: red; opacity: 1";
+                    usernameP.innerText = "Họ tên không được để trống.";
+                }
+
+                if (regexEmail.test(form.elements[1].value)) {
+                    form.elements[1].style = "border-color: green";
+                    emailP.style = "color: green; opacity: 1";
+                    emailP.innerText = "Email hợp lệ.";
+                } else {
+                    isValid = false;
+                    form.elements[1].style = "border-color: red";
+                    emailP.style = "color: red; opacity: 1";
+                    emailP.innerText = "Email không đúng định dạng.";
+                }
+                if (form.elements[1].value.trim() === "") {
+                    isValid = false;
+                    form.elements[1].style = "border-color: red";
+                    emailP.style = "color: red; opacity: 1";
+                    emailP.innerText = "Email không được để trống.";
+                }
+
+                if (form.elements[2].value.trim() === "") {
+                    isValid = false;
+                    form.elements[2].style = "border-color: red";
+                    infoP.style = "color: red; opacity: 1";
+                    infoP.innerText = "Thông tin không được để trống.";
+                } else {
+                    form.elements[2].style = "border-color: green";
+                    infoP.style = "color: green; opacity: 1";
+                    infoP.innerText = "Thông tin hợp lệ.";
+                }
+
+                if (!form.elements[3].checked) {
+                    isValid = false;
+                    chinhsachP.style = "opacity: 1; color: red";
+                } else {
+                    chinhsachP.style = "opacity: 0";
+                }
+
+                if (isValid) {
+                    setTimeout(function () {
+                        alert(
+                            "Chúng tôi đã nhận email và thông tin của bạn xin vui lòng đợi phản hồi từ chúng tôi xin cảm ơn."
+                        );
+                    }, 500);
+                }
             });
             function loadDing() {
                 load.classList.add("active");
             }
-
             setTimeout(function () {
                 loadDing();
             }, 2000);

@@ -346,13 +346,23 @@
         <div class="modal-login">
             <div class="container">
                 <h2 class="title">THÔNG TIN ĐĂNG NHẬP</h2>
-                <form action="" class="form-sign-in">
+                <form action="" class="form-sign-in" autocomplete="off">
                     <input
                         type="text"
-                        placeholder="Điện thoại/Email:"
-                        required
+                        name="username"
+                        placeholder="Tài khoản:"
                     />
-                    <input type="password" placeholder="Mật khẩu:" required />
+                    <p class="username-sign-in">
+                        Tài khoản không được để trống.
+                    </p>
+                    <input
+                        name="password"
+                        type="password"
+                        placeholder="Mật khẩu:"
+                    />
+                    <p class="passworld-sign-in">
+                        Mật khẩu không được để trống.
+                    </p>
                     <button type="submit">ĐĂNG NHẬP</button>
                 </form>
             </div>
