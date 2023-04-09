@@ -359,6 +359,7 @@ body {
     color: #fff;
     cursor: pointer;
     border-radius: 5px;
+    outline: none;
 }
 
 .modal-login .container button:hover,
@@ -399,10 +400,19 @@ body {
     display: block;
     width: 100%;
     padding: 15px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     outline: none;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.modal-sign-up .container span {
+    display: inline-block;
+    padding: 10px;
+    padding-left: 15px;
+    opacity: 0;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .choice-size {
