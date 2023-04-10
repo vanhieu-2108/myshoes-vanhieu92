@@ -62,6 +62,7 @@ window.addEventListener("load", () => {
                 formSignIn[1].value = "";
                 formSignIn[0].style = "";
                 formSignIn[1].style = "";
+                modalLogin.classList.remove("active");
             }, 500);
         }
     });
@@ -169,6 +170,7 @@ window.addEventListener("load", () => {
         if (isValid) {
             setTimeout(function () {
                 alert("Đăng ký thành công.");
+                modalSignUp.classList.remove("active");
             }, 500);
         }
     });
