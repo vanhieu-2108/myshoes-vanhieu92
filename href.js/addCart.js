@@ -94,6 +94,11 @@ document.body.addEventListener("click", function (e) {
         localStorage.setItem("listCarts", JSON.stringify(listCarts));
         total = 0;
         setTimeout(sumPrice, 10);
+    } else if (
+        !listShopping.contains(e.target) &&
+        !e.target.matches(".bag-hover")
+    ) {
+        listShopping.classList.remove("active");
     }
     if (listCarts.length === 0) {
         nothing.style = "opacity: 1";
