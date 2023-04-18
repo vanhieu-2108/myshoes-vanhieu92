@@ -9,8 +9,9 @@ let listCarts = JSON.parse(localStorage.getItem("listCarts")) || [];
 let dk = false;
 const returnSum = document.querySelector(".number");
 let total = 0;
+let countCart = 0;
 if (Array.isArray(listCarts) || listCarts.length > 0) {
-    bag.style = `--text--: "${listCarts.length}"`;
+    bag.style = `--text--: "${JSON.parse(localStorage.getItem("numCart"))}"`;
     listCarts.forEach((item) => {
         addCart(
             item.srcImg,
@@ -68,7 +69,9 @@ btnAddCart &&
         localStorage.setItem("listCarts", JSON.stringify(listCarts));
         total = 0;
         setTimeout(sumPrice, 10);
-        bag.style = `--text--: "${listCarts.length}"`;
+        countCart = 0;
+        setTimeout(handleCart, 10);
+        // bag.style = `--text--: "${listCarts.length}"`;
     });
 // Click hiện ra giỏ hàng
 bag.addEventListener("click", function (e) {
@@ -83,14 +86,23 @@ document.body.addEventListener("click", function (e) {
             e.target.previousElementSibling.previousElementSibling.previousElementSibling.getAttribute(
                 "src"
             );
-        console.log(imgSrc);
+        const checkNumOf =
+            e.target.previousElementSibling.firstElementChild.innerText.replace(
+                /x/g,
+                ""
+            );
+        console.log(checkNumOf);
         let index = listCarts.findIndex((item) => {
-            console.log(item);
-            return item.srcImg === imgSrc;
+            return (
+                item["numberOf"].trim() === checkNumOf.trim() &&
+                item.srcImg === imgSrc
+            );
         });
-        console.log(index);
+        // console.log(index);
         listCarts.splice(index, 1);
-        bag.style = `--text--: "${listCarts.length}"`;
+        // bag.style = `--text--: "${listCarts.length}"`;
+        countCart = 0;
+        setTimeout(handleCart, 1);
         localStorage.setItem("listCarts", JSON.stringify(listCarts));
         total = 0;
         setTimeout(sumPrice, 10);
@@ -122,4 +134,13 @@ function sumPrice() {
     });
     returnSum.textContent = total.toLocaleString("vi-VN");
     localStorage.setItem("sumPrice", JSON.stringify(returnSum.textContent));
+}
+
+function handleCart() {
+    listCarts.forEach((item) => {
+        let numOf = parseInt(item.numberOf);
+        countCart += numOf;
+    });
+    bag.style = `--text--: "${countCart}"`;
+    localStorage.setItem("numCart", JSON.stringify(countCart));
 }

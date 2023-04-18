@@ -82,7 +82,6 @@ window.addEventListener("load", () => {
     let currentIndex = 1;
     btnIncrease.addEventListener("click", () => {
         currentIndex++;
-        console.log(currentIndex);
         quantity.textContent = currentIndex;
     });
     btnReduce.addEventListener("click", () => {
