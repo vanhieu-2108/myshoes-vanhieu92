@@ -36,7 +36,7 @@ window.addEventListener("load", () => {
     const formSignIn = document.querySelector(".form-sign-in");
     const usernamePSignIn = document.querySelector(".username-sign-in");
     const passworldPSignIn = document.querySelector(".passworld-sign-in");
-    let isValid = true;
+    let isValid = false;
     formSignIn.addEventListener("submit", function (e) {
         e.preventDefault();
         if (formSignIn[0].value.trim() === "") {

@@ -47,9 +47,6 @@ window.addEventListener("load", () => {
         [...dotItems].forEach((el) => el.classList.remove("active"));
         dotItems[index].classList.add("active");
     }
-    setInterval(function () {
-        btnNext.click();
-    }, 5000);
     [...productItems].forEach((item) =>
         item.addEventListener("mouseenter", function () {
             item.querySelector(".img-2").style = `z-index: 1`;
