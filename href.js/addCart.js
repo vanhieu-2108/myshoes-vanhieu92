@@ -11,7 +11,8 @@ const returnSum = document.querySelector(".number");
 let total = 0;
 let countCart = 0;
 if (Array.isArray(listCarts) || listCarts.length > 0) {
-    bag.style = `--text--: "${JSON.parse(localStorage.getItem("numCart"))}"`;
+    const numCart = JSON.parse(localStorage.getItem("numCart")) || "0";
+    bag.style = `--text--: "${numCart}`;
     listCarts.forEach((item) => {
         addCart(
             item.srcImg,
