@@ -10,6 +10,11 @@ window.addEventListener("load", () => {
         modalSignUp.classList.remove("active");
         modalLogin.style = `animation: fadeIn 0.5s forwards linear`;
     });
+    signUp.addEventListener("click", function () {
+        modalLogin.classList.remove("active");
+        modalSignUp.classList.add("active");
+        modalSignUp.style = `animation: fadeIn 0.5s forwards linear`;
+    });
     body.addEventListener("click", function (e) {
         if (e.target.matches(".modal-login")) {
             modalLogin.classList.remove("active");
@@ -19,20 +24,15 @@ window.addEventListener("load", () => {
             choiceSize.classList.remove("active");
         }
     });
-    signUp.addEventListener("click", function () {
-        modalLogin.classList.remove("active");
-        modalSignUp.classList.add("active");
-        modalSignUp.style = `animation: fadeIn 0.5s forwards linear`;
-    });
     const bag = document.querySelector(".bag");
     const pBag = document.querySelector("p.bag");
     let bagIndex = 0;
-    if (pBag) {
-        pBag.addEventListener("click", function (e) {
-            bagIndex++;
-            bag.style = `--text--: "${bagIndex}"`;
-        });
-    }
+    // if (pBag) {
+    //     pBag.addEventListener("click", function (e) {
+    //         bagIndex++;
+    //         bag.style = `--text--: "${bagIndex}"`;
+    //     });
+    // }
     const formSignIn = document.querySelector(".form-sign-in");
     const usernamePSignIn = document.querySelector(".username-sign-in");
     const passworldPSignIn = document.querySelector(".passworld-sign-in");

@@ -415,3 +415,116 @@ main {
     font-weight: 400;
     font-style: italic;
 }
+
+.bag {
+    position: relative;
+}
+
+.list-shopping {
+    position: absolute;
+    width: 430px;
+    top: 50px;
+    right: -10px;
+    background-color: #fff;
+    animation: fadeInBag 0.5s forwards;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    z-index: 999999;
+    color: #333;
+    display: none;
+}
+
+.list-shopping .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-height: 400px;
+    height: 90%;
+    overflow-y: auto;
+}
+
+.list-shopping.active {
+    display: block;
+}
+
+@keyframes fadeInBag {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.list-shopping::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #fff;
+    right: 10px;
+    top: -15px;
+}
+
+.shopping-item {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 14px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.shopping-item:last-child {
+    border: 0;
+}
+
+.shopping-item .shopping-thumb {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.shopping-item .heading {
+    margin-left: 5px;
+}
+
+.shopping-item .title {
+    width: 150px;
+    margin-bottom: 5px;
+    color: #2d529b;
+}
+
+.shopping-item .price {
+    display: flex;
+    gap: 10px;
+}
+
+.shopping-item .icon {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.shopping-item .icon * {
+    pointer-events: none;
+}
+
+.shopping-item .icon:hover {
+    color: #50ad55;
+    cursor: pointer;
+}
+.sum-price {
+    padding: 10px;
+    padding-right: 40px;
+    text-align: right;
+}
+
+.foot-price {
+    margin-left: 20px;
+}
+
+p.nothing {
+    padding: 10px;
+}

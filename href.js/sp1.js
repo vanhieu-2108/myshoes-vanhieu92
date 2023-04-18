@@ -2,12 +2,13 @@ window.addEventListener("load", () => {
     const imgFirst = document.querySelector(".img-first");
     const imgHover = document.querySelector(".img-hover");
     const contentRight = document.querySelector(".content-right");
-    const contentRightWidth = contentRight.offsetWidth;
-    const contentRightHeight = contentRight.offsetHeight;
+    const contentRightWidth = contentRight && contentRight.offsetWidth;
+    const contentRightHeight = contentRight && contentRight.offsetHeight;
     const items = document.querySelectorAll(".content-left .item");
     imgHover.addEventListener("mousemove", function (e) {
         const pX = e.pageX;
         const pY = e.pageY;
+        imgFirst.style = `width: auto; height: auto`;
         let imgFirstWidth = imgFirst.offsetWidth;
         let imgFirstHeight = imgFirst.offsetHeight;
         let spaceX = (imgFirstWidth / 2 - contentRightWidth) * 2;

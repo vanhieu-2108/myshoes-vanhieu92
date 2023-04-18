@@ -49,7 +49,7 @@ window.addEventListener("load", () => {
     }
     setInterval(function () {
         btnNext.click();
-    }, 2000);
+    }, 5000);
     [...productItems].forEach((item) =>
         item.addEventListener("mouseenter", function () {
             item.querySelector(".img-2").style = `z-index: 1`;
