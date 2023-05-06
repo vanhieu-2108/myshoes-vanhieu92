@@ -10,6 +10,9 @@ let dk = false;
 const returnSum = document.querySelector(".number");
 let total = 0;
 let countCart = 0;
+var url = window.location.href;
+let isNull = null;
+let fileName = url.substring(url.lastIndexOf("/") + 1);
 if (Array.isArray(listCarts) || listCarts.length > 0) {
     const numCart = JSON.parse(localStorage.getItem("numCart")) || "0";
     bag.style = `--text--: "${numCart}`;
@@ -28,7 +31,7 @@ function addCart(srcImg, nameItem, price, size, numberOf) {
     const template = ` 
              <div class="shopping-item">
              <img
-                 src="${srcImg}"
+                 src="${fileName === "index.html" ? srcImg.slice(1) : srcImg}"
                  alt=""
                  class="shopping-thumb"
              />
@@ -36,7 +39,11 @@ function addCart(srcImg, nameItem, price, size, numberOf) {
                  <h2 class="title">
                  ${nameItem}
                  </h2>
-                 <p class="size">Chọn size: ${size}</p>
+                 ${
+                     size === isNull
+                         ? ""
+                         : `<p class="size">Chọn size: ${size}</p>`
+                 }
              </div>
              <div class="price">
                  <span class="numberof">x ${numberOf}</span>
