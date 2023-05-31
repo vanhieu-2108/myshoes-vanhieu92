@@ -27,10 +27,6 @@
     border-radius: 50px;
 }
 
-body {
-    height: 2000px;
-}
-
 /* Tablet + Mobile */
 
 @media screen and (max-width: 991px) {
@@ -217,5 +213,29 @@ body {
     .product-item .sale-new span {
         padding: 8px 4px;
         font-size: 10px;
+    }
+
+    .footer .row {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .footer .row .column {
+        width: 100% !important;
+    }
+
+    .footer .row .heading {
+        font-weight: bold;
+    }
+
+    .footer .row .desc {
+        font-size: 14px;
+        width: 350px !important;
+        text-align: justify;
+    }
+
+    .modal-login .container,
+    .modal-sign-up .container {
+        width: 350px;
     }
 }

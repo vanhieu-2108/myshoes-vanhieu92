@@ -1,0 +1,17 @@
+@media screen and (max-width: 767px) {
+    .block-img {
+        display: none;
+    }
+    .wrapper-gt .container-2 {
+        width: 100%;
+    }
+
+    .title-2 {
+        text-align: center;
+    }
+
+    .wrapper-gt .desc {
+        font-size: 18px;
+        padding-left: 0;
+    }
+}

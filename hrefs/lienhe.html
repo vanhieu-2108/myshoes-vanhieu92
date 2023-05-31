@@ -25,12 +25,61 @@
         <link rel="stylesheet" href="../assets/css/style.css" />
         <link rel="stylesheet" href="../hrefs.css/lienhe.css" />
         <link rel="stylesheet" href="../products-css/sp1.css">
+        <link rel="stylesheet" href="../hrefs.css/responsive.css">
+        <link rel="stylesheet" href="../hrefs.css/lienhe-responsive.css">
     </head>
     <body>
         <div class="progress-bar"></div>
         <header class="header">
             <div class="content">
                 <div class="body">
+                    <!-- Icon Bars Mobile -->
+                    <div class="header-bars-mobile">
+                        <i class="fa-solid fa-bars bars-icon"></i>
+                     </div>
+                     <!-- Nav-mobile -->
+                     <div class="header-overlay"></div>
+                     <nav class="nav-mobile">
+                        <div class="content">
+                            <ul class="list">
+                                <li>
+                                    <a href="#!" onclick="resizeLH('../index.html')"
+                                        >Trang Chủ</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#!" onclick="resizeLH('./gioithieu.html')"
+                                        >Giới thiệu</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#!" onclick="resizeLH('./sanpham.html')"
+                                        >Sản phẩm</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#!" onclick="resizeLH('./lienhe.html')"
+                                        >Liên hệ</a
+                                    >
+                                </li>
+                                </li>
+                                <li>
+                                    <a
+                                        href="#!"
+                                        class="sign-in-mobile"
+                                        >Đăng Nhập</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="#!"
+                                        class="sign-up-mobile"
+                                        >Đăng Ký</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                     </nav>
                     <!-- Logo -->
                     <img
                         src="../assets/imgs/logo.png"
@@ -210,11 +259,11 @@
                                     >Chính sách bảo mật</a
                                 ></span
                             >
-                            <p class="chinhsach-p">
-                                Vui lòng click vào ô đồng ý với chính sách bảo
-                                mật.
-                            </p>
                         </div>
+                        <p class="chinhsach-p">
+                            Vui lòng click vào ô đồng ý với chính sách bảo
+                            mật.
+                        </p>
                         <button type="submit">XÁC NHẬN</button>
                     </form>
                 </div>
@@ -289,9 +338,23 @@
         <div class="modal-login">
             <div class="container">
                 <h2 class="title">THÔNG TIN ĐĂNG NHẬP</h2>
-                <form action="" class="form-sign-in">
-                    <input type="text" placeholder="Điện thoại/Email:" />
-                    <input type="" placeholder="Mật khẩu:" />
+                <form action="" class="form-sign-in" autocomplete="off">
+                    <input
+                        type="text"
+                        name="username"
+                        placeholder="Tài khoản:"
+                    />
+                    <p class="username-sign-in">
+                        Tài khoản không được để trống.
+                    </p>
+                    <input
+                        name="password"
+                        type="password"
+                        placeholder="Mật khẩu:"
+                    />
+                    <p class="passworld-sign-in">
+                        Mật khẩu không được để trống.
+                    </p>
                     <button type="submit">ĐĂNG NHẬP</button>
                 </form>
             </div>
