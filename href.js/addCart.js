@@ -12,18 +12,11 @@ let total = 0;
 let countCart = 0;
 var url = window.location.href;
 let isNull = null;
-let fileName = url.substring(url.lastIndexOf("/") + 1);
 if (Array.isArray(listCarts) || listCarts.length > 0) {
     const numCart = JSON.parse(localStorage.getItem("numCart")) || "0";
     bag.style = `--text--: "${numCart}`;
     listCarts.forEach((item) => {
-        addCart(
-            item.srcImg,
-            item.nameItem,
-            item.price,
-            item.size,
-            item.numberOf
-        );
+        addCart(item.srcImg, item.nameItem, item.price, item.size, item.numberOf);
     });
     returnSum.textContent = JSON.parse(localStorage.getItem("sumPrice"));
 }
@@ -31,7 +24,7 @@ function addCart(srcImg, nameItem, price, size, numberOf) {
     const template = ` 
              <div class="shopping-item">
              <img
-                 src="${fileName === "index.html" ? srcImg.slice(1) : srcImg}"
+                 src="${srcImg}"
                  alt=""
                  class="shopping-thumb"
              />
@@ -39,11 +32,7 @@ function addCart(srcImg, nameItem, price, size, numberOf) {
                  <h2 class="title">
                  ${nameItem}
                  </h2>
-                 ${
-                     size === isNull
-                         ? ""
-                         : `<p class="size">Chọn size: ${size}</p>`
-                 }
+                 ${size === isNull ? "" : `<p class="size">Chọn size: ${size}</p>`}
              </div>
              <div class="price">
                  <span class="numberof">x ${numberOf}</span>
@@ -68,9 +57,7 @@ btnAddCart &&
         const srcImg = main.querySelector(".img-first").getAttribute("src");
         const nameItem = main.querySelector(".product-right .title").innerText;
         const price = main.querySelector(".price b").innerText;
-        const size =
-            main.querySelector(".size-item.active") &&
-            main.querySelector(".size-item.active").innerText;
+        const size = main.querySelector(".size-item.active") && main.querySelector(".size-item.active").innerText;
         const numberOf = main.querySelector(".block-left .quantity").innerText;
         addCart(srcImg, nameItem, price, size, numberOf);
         listCarts.push({ srcImg, nameItem, price, size, numberOf });
@@ -79,7 +66,6 @@ btnAddCart &&
         setTimeout(sumPrice, 10);
         countCart = 0;
         setTimeout(handleCart, 10);
-        // bag.style = `--text--: "${listCarts.length}"`;
     });
 // Click hiện ra giỏ hàng
 bag.addEventListener("click", function (e) {
@@ -90,23 +76,11 @@ document.body.addEventListener("click", function (e) {
     if (e.target.matches(".icon")) {
         const shoppingItem = e.target.parentNode;
         shoppingItem.remove();
-        const imgSrc =
-            e.target.previousElementSibling.previousElementSibling.previousElementSibling.getAttribute(
-                "src"
-            );
-        const checkNumOf =
-            e.target.previousElementSibling.firstElementChild.innerText.replace(
-                /x/g,
-                ""
-            );
-        console.log(checkNumOf);
+        let imgSrc = e.target.previousElementSibling.previousElementSibling.previousElementSibling.getAttribute("src");
+        const checkNumOf = e.target.previousElementSibling.firstElementChild.innerText.replace(/x/g, "");
         let index = listCarts.findIndex((item) => {
-            return (
-                item["numberOf"].trim() === checkNumOf.trim() &&
-                item.srcImg === imgSrc
-            );
+            return item["numberOf"].trim() === checkNumOf.trim() && item.srcImg === imgSrc;
         });
-        // console.log(index);
         listCarts.splice(index, 1);
         // bag.style = `--text--: "${listCarts.length}"`;
         countCart = 0;
@@ -114,15 +88,15 @@ document.body.addEventListener("click", function (e) {
         localStorage.setItem("listCarts", JSON.stringify(listCarts));
         total = 0;
         setTimeout(sumPrice, 10);
-    } else if (
-        !listShopping.contains(e.target) &&
-        !e.target.matches(".bag-hover")
-    ) {
+    } else if (!listShopping.contains(e.target) && !e.target.matches(".bag-hover")) {
         listShopping.classList.remove("active");
     }
     if (listCarts.length === 0) {
         nothing.style = "opacity: 1";
         localStorage.setItem("dk", JSON.stringify("false"));
+    }
+    if (!bag.contains(e.target) && e.target.matches(".list-shopping")) {
+        listShopping.classList.remove("active");
     }
 });
 
@@ -135,9 +109,7 @@ function sumPrice() {
     listCarts.forEach((item) => {
         const numberOf = item.numberOf;
         const price = item.price;
-        const newPrice = Number(
-            price.slice(0, price.length - 1).replace(/\./g, "")
-        );
+        const newPrice = Number(price.slice(0, price.length - 1).replace(/\./g, ""));
         total += numberOf * newPrice;
     });
     returnSum.textContent = total.toLocaleString("vi-VN");

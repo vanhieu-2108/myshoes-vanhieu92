@@ -22,17 +22,15 @@ window.addEventListener("load", () => {
             modalSignUp.classList.remove("active");
         } else if (e.target.matches(".choice-size")) {
             choiceSize.classList.remove("active");
+        } else if (
+            e.target.matches(".header-overlay") ||
+            e.target.matches(".sign-in-mobile") ||
+            e.target.matches(".sign-up-mobile")
+        ) {
+            document.querySelector(".header-overlay").classList.toggle("active");
+            document.querySelector(".nav-mobile").classList.toggle("active");
         }
     });
-    const bag = document.querySelector(".bag");
-    const pBag = document.querySelector("p.bag");
-    let bagIndex = 0;
-    // if (pBag) {
-    //     pBag.addEventListener("click", function (e) {
-    //         bagIndex++;
-    //         bag.style = `--text--: "${bagIndex}"`;
-    //     });
-    // }
     const formSignIn = document.querySelector(".form-sign-in");
     const usernamePSignIn = document.querySelector(".username-sign-in");
     const passworldPSignIn = document.querySelector(".passworld-sign-in");
@@ -76,8 +74,7 @@ window.addEventListener("load", () => {
         } else if (formSignUp.elements[0].value.length <= 1) {
             isValid = false;
             formSignUp.children[1].style = "opacity: 1; color: red";
-            formSignUp.children[1].textContent =
-                "Vui lòng nhập họ tên phải lớn hơn một kí tự.";
+            formSignUp.children[1].textContent = "Vui lòng nhập họ tên phải lớn hơn một kí tự.";
         } else {
             formSignUp.children[1].style = "opacity: 1;color: green";
             formSignUp.elements[0].style = "border-color: green";
@@ -115,8 +112,7 @@ window.addEventListener("load", () => {
         } else if (formSignUp.elements[2].value.trim() === "") {
             formSignUp.children[5].style = "opacity: 1;color: red";
             formSignUp.elements[2].style = "border-color: red";
-            formSignUp.children[5].textContent =
-                "Số điện thoại không được để trống.";
+            formSignUp.children[5].textContent = "Số điện thoại không được để trống.";
             isValid = false;
         } else {
             formSignUp.children[5].style = "opacity: 1;color: red";
@@ -129,14 +125,12 @@ window.addEventListener("load", () => {
         if (formSignUp.elements[3].value.trim() === "") {
             formSignUp.children[7].style = "opacity: 1;color: red";
             formSignUp.elements[3].style = "border-color: red";
-            formSignUp.children[7].textContent =
-                "Mật khẩu không được để trống.";
+            formSignUp.children[7].textContent = "Mật khẩu không được để trống.";
             isValid = false;
         } else if (formSignUp.elements[3].value.trim().length < 8) {
             formSignUp.children[7].style = "opacity: 1;color: red";
             formSignUp.elements[3].style = "border-color: red";
-            formSignUp.children[7].textContent =
-                "Mật khẩu tối đa phải 8 kí tự.";
+            formSignUp.children[7].textContent = "Mật khẩu tối đa phải 8 kí tự.";
             isValid = false;
         } else {
             formSignUp.children[7].style = "opacity: 1;color: green";
@@ -149,17 +143,12 @@ window.addEventListener("load", () => {
         if (formSignUp.elements[4].value.trim() === "") {
             formSignUp.children[9].style = "opacity: 1;color: red";
             formSignUp.elements[4].style = "border-color: red";
-            formSignUp.children[9].textContent =
-                "Nhập lại mật khẩu không được để trống.";
+            formSignUp.children[9].textContent = "Nhập lại mật khẩu không được để trống.";
             isValid = false;
-        } else if (
-            formSignUp.elements[4].value.trim() !==
-            formSignUp.elements[3].value.trim()
-        ) {
+        } else if (formSignUp.elements[4].value.trim() !== formSignUp.elements[3].value.trim()) {
             formSignUp.children[9].style = "opacity: 1;color: red";
             formSignUp.elements[4].style = "border-color: red";
-            formSignUp.children[9].textContent =
-                "Mật khẩu bạn nhập lại không khớp.";
+            formSignUp.children[9].textContent = "Mật khẩu bạn nhập lại không khớp.";
             isValid = false;
         } else {
             formSignUp.children[9].style = "opacity: 1;color: green";
@@ -174,4 +163,23 @@ window.addEventListener("load", () => {
             }, 500);
         }
     });
+    const menuBarsMobile = document.querySelector(".header-bars-mobile");
+    menuBarsMobile &&
+        menuBarsMobile.addEventListener("click", function () {
+            document.querySelector(".header-overlay").classList.toggle("active");
+            document.querySelector(".nav-mobile").classList.toggle("active");
+        });
+    // Sign in Mobile
+    const signInMobile = document.querySelector(".sign-in-mobile");
+    signInMobile &&
+        signInMobile.addEventListener("click", function () {
+            modalLogin.classList.add("active");
+        });
+
+    // Sign up Mobile
+    const signUpMobile = document.querySelector(".sign-up-mobile");
+    signUpMobile &&
+        signUpMobile.addEventListener("click", function () {
+            modalSignUp.classList.add("active");
+        });
 });
