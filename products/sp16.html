@@ -23,18 +23,73 @@
         <link rel="stylesheet" href="../assets/css/reset.css" />
         <link rel="stylesheet" href="../assets/css/style.css" />
         <link rel="stylesheet" href="../products-css/sp1.css" />
+        <link rel="stylesheet" href="../hrefs.css/responsive.css">
+        <link rel="stylesheet" href="../hrefs.css/sp1-responsive.css">
+        <link rel="stylesheet" href="../hrefs.css/toast.css">
     </head>
     <body>
         <div class="progress-bar"></div>
         <header class="header">
             <div class="content">
                 <div class="body">
-                    <!-- Logo -->
+                   <!-- Icon Bars Mobile -->
+                   <div class="header-bars-mobile">
+                    <i class="fa-solid fa-bars bars-icon"></i>
+                 </div>
+                 <!-- Nav-mobile -->
+                 <div class="header-overlay"></div>
+                 <nav class="nav-mobile">
+                    <div class="content">
+                        <ul class="list">
+                            <li>
+                                <a href="#!" onclick="resizeSP12('../index.html')"
+                                    >Trang Chủ</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#!"
+                                    onclick="resizeSP12('../hrefs/gioithieu.html')"
+                                    >Giới thiệu</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#!"
+                                    onclick="resizeSP12('../hrefs/sanpham.html')"
+                                    >Sản phẩm</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#!" onclick="resizeSP12('../hrefs/lienhe.html')"
+                                    >Liên hệ</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#!"
+                                    class="sign-in-mobile"
+                                    >Đăng Nhập</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#!"
+                                    class="sign-up-mobile"
+                                    >Đăng Ký</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                 </nav>
+                <!-- Logo -->
+                <a href="../index.html">
                     <img
-                        src="../assets/imgs/logo.png"
-                        alt="myshoes"
-                        class="img-logo"
-                    />
+                    src="../assets/imgs/logo.png"
+                    alt="myshoes"
+                    class="img-logo"
+                />
+                </a>
                     <!-- Form search -->
                     <div class="form-search">
                         <input
@@ -401,6 +456,7 @@
                 <img src="./assets/imgs/chon-size.png" alt="" />
             </div>
         </div>
+        <div id="toast"></div>
         <script>
             const progressBar = document.querySelector(".progress-bar");
             window.addEventListener("scroll", function (e) {
@@ -433,5 +489,6 @@
         <script src="../app.js"></script>
         <script src="../href.js/sp1.js"></script>
         <script src="../href.js/addCart.js"></script>
+        <script src="../href.js/toast.js"></script>
     </body>
 </html>

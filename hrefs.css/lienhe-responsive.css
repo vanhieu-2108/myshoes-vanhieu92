@@ -9,6 +9,10 @@
     .form-right {
         width: 100%;
     }
+    .form-right .title {
+        line-height: 1.5;
+        text-align: center;
+    }
     .confirm {
         font-size: 14px;
         display: flex;
@@ -17,5 +21,6 @@
 
     .chinhsach-p {
         width: 230px;
+        line-height: 1.4;
     }
 }

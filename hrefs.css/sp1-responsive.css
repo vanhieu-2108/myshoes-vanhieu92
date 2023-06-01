@@ -21,6 +21,11 @@
         column-gap: 20px;
     }
 
+    .product-right .title {
+        width: 90% !important;
+        line-height: 1.4;
+    }
+
     .product-right .group-price .price {
         font-size: 18px;
         padding: 20px 10px 20px 0;
@@ -71,6 +76,10 @@
     }
     .block-img {
         width: 100%;
+    }
+    .block-img .title {
+        line-height: 1.6;
+        margin-bottom: 20px;
     }
     .foot .desc {
         font-size: 16px;
