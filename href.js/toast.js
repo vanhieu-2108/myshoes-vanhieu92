@@ -47,7 +47,7 @@ window.addEventListener("load", () => {
             title: "Thành Công!",
             message: "Thêm giỏ hàng thành công.",
             type: "success",
-            duration: 2000,
+            duration: 1000,
         });
     }
 
