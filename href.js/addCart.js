@@ -1,57 +1,59 @@
-// Thêm giỏ hàng
-const bag = document.querySelector(".bag-hover");
-const listShopping = document.querySelector(".list-shopping");
-const innerCart = document.querySelector(".inner-shopping");
-const btnAddCart = document.querySelector(".block-mid .bag");
-const arrChildrenCart = [...innerCart.children];
-const nothing = document.querySelector(".nothing");
-let listCarts = JSON.parse(localStorage.getItem("listCarts")) || [];
-let dk = false;
-const returnSum = document.querySelector(".number");
-let total = 0;
-let countCart = 0;
-var url = window.location.href;
-let isNull = null;
-if (Array.isArray(listCarts) || listCarts.length > 0) {
-    const numCart = JSON.parse(localStorage.getItem("numCart")) || "0";
-    bag.style = `--text--: "${numCart}`;
-    listCarts.forEach((item) => {
+window.addEventListener("load", () => {
+  function handleCart() {
+    // Thêm giỏ hàng
+    const bag = document.querySelector(".bag-hover");
+    const listShopping = document.querySelector(".list-shopping");
+    const innerCart = document.querySelector(".inner-shopping");
+    const btnAddCart = document.querySelector(".block-mid .bag");
+    const arrChildrenCart = [...innerCart.children];
+    const nothing = document.querySelector(".nothing");
+    let listCarts = JSON.parse(localStorage.getItem("listCarts")) || [];
+    let dk = false;
+    const returnSum = document.querySelector(".number");
+    let total = 0;
+    let countCart = 0;
+    // var url = window.location.href;
+    let isNull = null;
+    if (Array.isArray(listCarts) || listCarts.length > 0) {
+      const numCart = JSON.parse(localStorage.getItem("numCart")) || "0";
+      bag.style = `--text--: "${numCart}`;
+      listCarts.forEach((item) => {
         addCart(item.srcImg, item.nameItem, item.price, item.size, item.numberOf);
-    });
-    returnSum.textContent = JSON.parse(localStorage.getItem("sumPrice"));
-}
-function addCart(srcImg, nameItem, price, size, numberOf) {
-    const template = ` 
-             <div class="shopping-item">
-             <img
-                 src="${srcImg}"
-                 alt=""
-                 class="shopping-thumb"
-             />
-             <div class="heading">
-                 <h2 class="title">
-                 ${nameItem}
-                 </h2>
-                 ${size === isNull ? "" : `<p class="size">Chọn size: ${size}</p>`}
-             </div>
-             <div class="price">
-                 <span class="numberof">x ${numberOf}</span>
-                 <div class="deal">${price}</div>
-             </div>
-             <div class="icon">
-                 <i class="fa-solid fa-x"></i>
-             </div>
-         </div>
-     `;
-    innerCart.insertAdjacentHTML("afterbegin", template);
-}
-let value = 0;
-btnAddCart &&
-    btnAddCart.addEventListener("click", function (e) {
+      });
+      returnSum.textContent = JSON.parse(localStorage.getItem("sumPrice"));
+    }
+    function addCart(srcImg, nameItem, price, size, numberOf) {
+      const template = ` 
+               <div class="shopping-item">
+               <img
+                   src="${srcImg}"
+                   alt=""
+                   class="shopping-thumb"
+               />
+               <div class="heading">
+                   <h2 class="title">
+                   ${nameItem}
+                   </h2>
+                   ${size === isNull ? "" : `<p class="size">Chọn size: ${size}</p>`}
+               </div>
+               <div class="price">
+                   <span class="numberof">x ${numberOf}</span>
+                   <div class="deal">${price}</div>
+               </div>
+               <div class="icon">
+                   <i class="fa-solid fa-x"></i>
+               </div>
+           </div>
+       `;
+      innerCart.insertAdjacentHTML("afterbegin", template);
+    }
+    let value = 0;
+    btnAddCart &&
+      btnAddCart.addEventListener("click", function (e) {
         arrChildrenCart.forEach((item) => {
-            if (item.classList.contains("nothing")) {
-                item.style = `opacity: 0`;
-            }
+          if (item.classList.contains("nothing")) {
+            item.style = `opacity: 0`;
+          }
         });
         const main = document.querySelector("main");
         const srcImg = main.querySelector(".img-first").getAttribute("src");
@@ -66,20 +68,20 @@ btnAddCart &&
         setTimeout(sumPrice, 10);
         countCart = 0;
         setTimeout(handleCart, 10);
+      });
+    // Click hiện ra giỏ hàng
+    bag.addEventListener("click", function (e) {
+      listShopping.classList.toggle("active");
     });
-// Click hiện ra giỏ hàng
-bag.addEventListener("click", function (e) {
-    listShopping.classList.toggle("active");
-});
-// Xóa sp trong giỏ hàng và các tính năng khác
-document.body.addEventListener("click", function (e) {
-    if (e.target.matches(".icon")) {
+    // Xóa sp trong giỏ hàng và các tính năng khác
+    document.body.addEventListener("click", function (e) {
+      if (e.target.matches(".icon")) {
         const shoppingItem = e.target.parentNode;
         shoppingItem.remove();
         let imgSrc = e.target.previousElementSibling.previousElementSibling.previousElementSibling.getAttribute("src");
         const checkNumOf = e.target.previousElementSibling.firstElementChild.innerText.replace(/x/g, "");
         let index = listCarts.findIndex((item) => {
-            return item["numberOf"].trim() === checkNumOf.trim() && item.srcImg === imgSrc;
+          return item["numberOf"].trim() === checkNumOf.trim() && item.srcImg === imgSrc;
         });
         listCarts.splice(index, 1);
         // bag.style = `--text--: "${listCarts.length}"`;
@@ -88,39 +90,46 @@ document.body.addEventListener("click", function (e) {
         localStorage.setItem("listCarts", JSON.stringify(listCarts));
         total = 0;
         setTimeout(sumPrice, 10);
-    } else if (!listShopping.contains(e.target) && !e.target.matches(".bag-hover")) {
+      } else if (!listShopping.contains(e.target) && !e.target.matches(".bag-hover")) {
         listShopping.classList.remove("active");
-    }
-    if (listCarts.length === 0) {
+      }
+      if (listCarts.length === 0) {
         nothing.style = "opacity: 1";
         localStorage.setItem("dk", JSON.stringify("false"));
-    }
-    if (!bag.contains(e.target) && e.target.matches(".list-shopping")) {
+      }
+      if (!bag.contains(e.target) && e.target.matches(".list-shopping")) {
         listShopping.classList.remove("active");
-    }
-});
+      }
+    });
 
-if (!JSON.parse(localStorage.getItem(dk))) {
-    if (listCarts.length > 0) {
+    if (!JSON.parse(localStorage.getItem(dk))) {
+      if (listCarts.length > 0) {
         nothing.style = "opacity: 0";
+      }
     }
-}
-function sumPrice() {
-    listCarts.forEach((item) => {
+    function sumPrice() {
+      listCarts.forEach((item) => {
         const numberOf = item.numberOf;
         const price = item.price;
         const newPrice = Number(price.slice(0, price.length - 1).replace(/\./g, ""));
         total += numberOf * newPrice;
-    });
-    returnSum.textContent = total.toLocaleString("vi-VN");
-    localStorage.setItem("sumPrice", JSON.stringify(returnSum.textContent));
-}
+      });
+      returnSum.textContent = total.toLocaleString("vi-VN");
+      localStorage.setItem("sumPrice", JSON.stringify(returnSum.textContent));
+    }
 
-function handleCart() {
-    listCarts.forEach((item) => {
+    function handleCart() {
+      listCarts.forEach((item) => {
         let numOf = parseInt(item.numberOf);
         countCart += numOf;
-    });
-    bag.style = `--text--: "${countCart}"`;
-    localStorage.setItem("numCart", JSON.stringify(countCart));
-}
+      });
+      bag.style = `--text--: "${countCart}"`;
+      localStorage.setItem("numCart", JSON.stringify(countCart));
+    }
+
+    if (listCarts.length === 0) {
+      returnSum.textContent = "0";
+    }
+  }
+  handleCart();
+});

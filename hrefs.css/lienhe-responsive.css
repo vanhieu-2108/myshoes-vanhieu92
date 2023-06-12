@@ -1,26 +1,54 @@
 @media screen and (max-width: 767px) {
-    .form {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  .form {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .form-left,
-    .form-right {
-        width: 100%;
-    }
-    .form-right .title {
-        line-height: 1.5;
-        text-align: center;
-    }
-    .confirm {
-        font-size: 14px;
-        display: flex;
-        align-items: center;
-    }
+  .form-left,
+  .form-right {
+    width: 100%;
+  }
+  .form-right .title {
+    line-height: 1.5;
+    text-align: center;
+  }
+  .confirm {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
 
-    .chinhsach-p {
-        width: 230px;
-        line-height: 1.4;
-    }
+  .chinhsach-p {
+    width: 230px;
+    line-height: 1.4;
+  }
+  .form-right .form-group .name,
+  .form-right .form-group .email,
+  .form-right .form-group textarea,
+  .form-right button {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .form-left .title {
+    line-height: 1.5;
+  }
+  .form-left .desc {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .form-right .form-group .name,
+  .form-right .form-group .email,
+  .form-right .form-group textarea,
+  .form-right button {
+    width: 100%;
+  }
+  .bottom-actions {
+    z-index: -1;
+  }
+  .map {
+    z-index: -1;
+  }
 }
