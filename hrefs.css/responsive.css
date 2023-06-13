@@ -42,6 +42,9 @@
 /* Tablet + Mobile */
 
 @media screen and (max-width: 991px) {
+  .header-bars-mobile {
+    cursor: pointer;
+  }
   .header-overlay {
     position: fixed;
     inset: 0;
@@ -278,6 +281,7 @@
 
   .footer .row .column {
     width: 100% !important;
+    text-align: center;
   }
 
   .footer .row .heading {
