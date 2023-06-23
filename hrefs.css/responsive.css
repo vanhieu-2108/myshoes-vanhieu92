@@ -31,8 +31,7 @@
   .footer .column:first-child .desc {
     width: 100%;
   }
-  .img-wrapper img {
-  }
+
   .footer .column:last-child img:last-child {
     width: 181px;
     height: 68px;
@@ -80,6 +79,16 @@
     transition: 0.5s;
     display: block;
     z-index: 9999999999;
+    animation: fadeInNav 0.5s ease-in-out;
+  }
+
+  @keyframes fadeInNav {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   .nav-mobile.active {
@@ -136,7 +145,7 @@
     width: 390px;
   }
   .footer .row .column:nth-of-type(2) .heading {
-    text-align: center;
+    padding-left: 130px;
   }
   .footer .row .column:nth-of-type(2) .list {
     padding-left: 130px;
@@ -290,7 +299,7 @@
 
   .footer .row .desc {
     font-size: 14px;
-    width: 350px !important;
+    width: 95% !important;
     text-align: justify;
   }
 

@@ -49,6 +49,6 @@
     z-index: -1;
   }
   .map {
-    z-index: -1;
+    z-index: 1;
   }
 }
